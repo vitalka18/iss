@@ -1,0 +1,297 @@
+
+//==============================================================================
+// Header
+//==============================================================================
+.header
+  margin-bottom: 5px
+
+.header__top
+  +clr
+  padding: 15px 0
+  margin-bottom: 8px
+  border-bottom: 1px solid #eeeeee
+
+.header__bottom
+  +clr
+
+.header__left
+  float: left
+
+.header__right
+  float: right
+
+.nav-link
+  +clr
+  margin: 0
+  padding: 0
+  list-style: none
+
+.nav-link__item
+  float: left
+  margin-right: 25px
+  &:last-child
+    margin-right: none
+
+.nav-link__link
+  position: relative
+  font-size: 13px
+  color: #112232
+  text-decoration: none
+  &:after
+    content: ''
+    position: absolute
+    bottom: -3px
+    left: 0
+    right: 0
+    display: block
+    width: 0
+    height: 1px
+    margin: auto
+    transition: width .3s
+    background: #112232
+  &:hover,
+  &:active,
+  &.active,
+  &:focus,
+  &_active
+    text-decoration: none
+    color: #112232
+    &:after
+      width: 100%
+
+.header__info-block
+  +clr
+  float: right
+
+.info-group
+  text-align: right
+
+.info-group_white
+  padding: 12px 0
+  color: #fff
+  font-size: 13px
+  .info-group__item
+    color: #fff
+    margin-left: 0
+    &:hover,
+    &:active,
+    &:focus
+      color: #fff  
+
+.info-group_justify
+  display: flex
+  flex-flow: row nowrap
+  justify-content: space-between
+  align-items: center
+
+.info-group__item
+  display: inline-block
+  margin-left: 45px
+  font-size: 13px
+  color: #1e1e1e
+  text-decoration: none
+  transition: opacity .3s
+  &:first-child
+    margin-left: 0
+  &:hover,
+  &:active,
+  &:focus
+    text-decoration: none
+    color: #1e1e1e
+    opacity: .7
+
+.info-group__item_bold
+  font-family: "ClearSansBold"
+
+.info-group__icon
+  display: inline-block
+  margin-right: 6px
+  vertical-align: middle
+
+.brand
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  color: #1e1e1e
+  text-align: left
+  text-decoration: none
+  font-weight: bold
+  &:hover,
+  &:active,
+  &:focus
+    text-decoration: none
+    color: #1e1e1e
+
+.brand__text
+  padding-left: 12px
+  font-family: "ClearSansBold"
+  text-transform: uppercase
+
+.calculate-cost
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  margin-top: 8px
+
+.calculate-cost__icon
+  margin: 0 25px 0 18px
+//==============================================================================
+// navigation
+//==============================================================================
+
+.navigation
+  background: #112232
+  +clr
+
+.navigation__menu
+  float: left
+  padding-left: 15px
+
+.navigation__action
+  float: right
+
+.menu
+  +clr
+
+.menu__item
+  float: left
+  margin-left: 60px
+  &:first-child
+    margin-left: 0
+
+.menu__link
+  position: relative
+  display: block
+  padding: 15px 20px 15px 0
+  color: #fff
+  font-size: 13px
+  font-family: "ClearSansBold"
+  text-decoration: none
+  text-transform: uppercase
+  transition: color 0.3s, text-shadow 0.3s
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    margin: auto
+    display: block
+    +s(menu-arrow)
+    transition: transform .3s
+  &:hover,
+  &:active,
+  &:focus,
+  &_active
+    color: #ff4e4e
+    text-decoration: none
+    &:after
+      transform: translate(5px, 0)
+  &:active
+    text-shadow: 0 0 1px darken(#ff4e4e, 10%)
+    &:after
+      transform: rotate(360deg) translate(0, 0)
+
+.action-icon-group 
+  margin: 5px
+
+.action-icon-group__item
+  display: inline-block
+  padding: 10px
+  vertical-align: middle
+  transition: opacity .3s
+  &:hover
+    opacity: .7
+//==============================================================================
+// button
+//==============================================================================
+
+.btn-calc
+  padding: 12px 18px
+  background: #ff4e4e
+  text-transform: uppercase
+  font-family: "ClearSansBold"
+  font-size: 12px
+  color: #fff
+  transition: background .3s
+  &:hover,
+  &:active,
+  &:focus
+    color: #fff
+    background: darken(#ff4e4e, 20%)
+
+.btn-more
+  padding: 12px 30px
+  border-radius: 0
+  background: #3498db
+  text-transform: uppercase
+  font-family: "ClearSansBold"
+  font-size: 12px
+  color: #fff
+  transition: background .3s
+  &:hover,
+  &:active,
+  &:focus
+    color: #fff
+    background: darken(#3498db, 20%)
+//==============================================================================
+// main page
+//==============================================================================
+
+.aside-link-group
+  background: #3498db
+
+.main-slider
+  position: relative
+  .slick-next
+    +s(slider-arrow)
+    right: 0
+    transform: rotate(180deg)
+
+  .slick-prev
+    +s(slider-arrow)
+    left: 0
+
+  .slick-arrow
+    display: inline-block
+    width: 25px
+    height: 47px
+    background-color: none
+    text-indent: -9999px
+    overflow: hidden
+
+.main-slider__arrows
+  position: absolute
+  top: 50%
+  left: 0
+  right: 0
+  margin: -24px auto 0
+
+.main-slider__item
+  position: relative
+
+.maim-slider__content
+  position: absolute
+  z-index: 5
+  top: 0
+  left: 0
+  right: 0
+  padding: 120px 0 0 90px
+  color: #fff
+
+.main-slider__img
+  height: 480px
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+
+.main-slider__title
+  margin-bottom: 20px
+  font-family: "ClearSansBold"
+  font-size: 36px
+  text-transform: uppercase
+.main-slider__text
+  max-width: 500px
+  margin-bottom: 35px
+  font-size: 16px
+

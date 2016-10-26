@@ -1,0 +1,127 @@
+$icons: (0:0)
+$icons: map-merge($icons,(clock-red: (X: -35px, Y:-51px, W: 11px, H: 11px, TW: 100px, TH: 81px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(mail-red: (X: -82px, Y:-54px, W: 13px, H: 9px, TW: 100px, TH: 81px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(menu-arrow: (X: -50px, Y:-51px, W: 7px, H: 11px, TW: 100px, TH: 81px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(red-arrow: (X: 0px, Y:-51px, W: 31px, H: 12px, TW: 100px, TH: 81px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(slider-arrow: (X: 0px, Y:0px, W: 25px, H: 47px, TW: 100px, TH: 81px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(tel-red: (X: -82px, Y:-37px, W: 13px, H: 13px, TW: 100px, TH: 81px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(white-car: (X: -29px, Y:-24px, W: 22px, H: 16px, TW: 100px, TH: 81px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(white-cart: (X: -82px, Y:0px, W: 18px, H: 14px, TW: 100px, TH: 81px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(white-clock: (X: -29px, Y:0px, W: 26px, H: 20px, TW: 100px, TH: 81px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(white-credit: (X: -59px, Y:0px, W: 19px, H: 24px, TW: 100px, TH: 81px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(white-house: (X: -59px, Y:-28px, W: 18px, H: 18px, TW: 100px, TH: 81px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(white-people: (X: 0px, Y:-67px, W: 11px, H: 14px, TW: 100px, TH: 81px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(white-search: (X: -82px, Y:-18px, W: 15px, H: 15px, TW: 100px, TH: 81px, IMG: '../img/icons.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+	$icon: map-get($icons, $icon)
+	@return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+	background-image: url(icon-attr($iconName, IMG))
+	width: icon-attr($iconName, W)
+	height: icon-attr($iconName, H)
+	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+	background-image: url(icon-attr($iconName, IMG))
+	$width: icon-attr($iconName, W)
+	$height: icon-attr($iconName, H)
+	width: $width/2
+	height: $height/2
+	$x: icon-attr($iconName, X)
+	$y: icon-attr($iconName, Y)
+	background-position: $x/2 $y/2
+	$tw: icon-attr($iconName, TW) 	
+	$th: icon-attr($iconName, TH)
+	background-size: $tw/2 $th/2  	
+
+
+@mixin s($i)
+	+sprite($i)
+@mixin sp($i)
+	+sprite-position($i)
+@mixin sr($i)
+	+sprite-retina($i)	
+
+
+.icon-clock-red
+	width: 11px
+	height: 11px
+	background-image: url('../img/icons.png')
+	background-position: -35px -51px
+
+.icon-mail-red
+	width: 13px
+	height: 9px
+	background-image: url('../img/icons.png')
+	background-position: -82px -54px
+
+.icon-menu-arrow
+	width: 7px
+	height: 11px
+	background-image: url('../img/icons.png')
+	background-position: -50px -51px
+
+.icon-red-arrow
+	width: 31px
+	height: 12px
+	background-image: url('../img/icons.png')
+	background-position: 0px -51px
+
+.icon-slider-arrow
+	width: 25px
+	height: 47px
+	background-image: url('../img/icons.png')
+	background-position: 0px 0px
+
+.icon-tel-red
+	width: 13px
+	height: 13px
+	background-image: url('../img/icons.png')
+	background-position: -82px -37px
+
+.icon-white-car
+	width: 22px
+	height: 16px
+	background-image: url('../img/icons.png')
+	background-position: -29px -24px
+
+.icon-white-cart
+	width: 18px
+	height: 14px
+	background-image: url('../img/icons.png')
+	background-position: -82px 0px
+
+.icon-white-clock
+	width: 26px
+	height: 20px
+	background-image: url('../img/icons.png')
+	background-position: -29px 0px
+
+.icon-white-credit
+	width: 19px
+	height: 24px
+	background-image: url('../img/icons.png')
+	background-position: -59px 0px
+
+.icon-white-house
+	width: 18px
+	height: 18px
+	background-image: url('../img/icons.png')
+	background-position: -59px -28px
+
+.icon-white-people
+	width: 11px
+	height: 14px
+	background-image: url('../img/icons.png')
+	background-position: 0px -67px
+
+.icon-white-search
+	width: 15px
+	height: 15px
+	background-image: url('../img/icons.png')
+	background-position: -82px -18px
