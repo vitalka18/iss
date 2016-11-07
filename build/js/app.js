@@ -45,6 +45,28 @@ $(document).ready(function() {
   testimonialGallery();
   cardGallery();
   videoSlider();
+  if ( $(window).width() > 991) {
+    if (!$('.js-category-menu').hasClass('slick-initialized')) {
+      categoryMenu();
+    }
+  } else {
+    if ($('.js-category-menu').hasClass('slick-initialized')) {
+      $('.js-category-menu').slick('unslick');
+    }
+  }
+
+  $(window).resize(function() {
+    if ( $(window).width() > 991 ) {
+      if (!$('.js-category-menu').hasClass('slick-initialized')) {
+        categoryMenu();
+      }
+    } else {
+      if ($('.js-category-menu').hasClass('slick-initialized')) {
+        $('.js-category-menu').slick('unslick');
+      }
+    }
+  });
+  
 
   $('.js-video').magnificPopup({
     type: 'iframe',
@@ -116,32 +138,33 @@ function videoSlider() {
     nextArrow: $slider.parent().find('.slick-testimonial-next'),
     slidesToShow: slideToshow,
     slideToScroll: 1,
+  });
+}
+
+function categoryMenu() {
+  var $slider = $('.js-category-menu');
+  $slider.slick({
+    dots: false,
+    infinite: false,
+    speed: 500,
+    prevArrow: '',
+    nextArrow: $slider.parent().find('.slick-testimonial-next'),
+    slidesToShow: 4,
+    slideToScroll: 1,
     responsive: [
       {
         breakpoint: 991,
         settings: {
-          slidesToShow: 4        
-        }
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 3        
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2        
-        }
-      },
-      {
-        breakpoint: 450,
-        settings: {
-          slidesToShow: 1    
+          unslick: true       
         }
       },
     ]
+  });
+
+  $slider.on('afterChange', function(event, slick, currentSlide, nextSlide){
+    if ( $slider.parent().find('.slick-testimonial-next').hasClass('slick-disabled') ) {
+      $slider.slick('slickGoTo', 0);
+    }
   });
 }
 

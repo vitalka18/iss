@@ -1160,8 +1160,26 @@
   margin-bottom: 25px
 
 .navs_category
-  margin: 27px 0 29px
+  margin-bottom: 0
+  margin-top: 0
 
+.navs_category-container
+  position: relative
+  max-width: 700px
+  margin: 27px 0 29px
+  padding-right: 100px
+
+  .navs__item
+    margin-bottom: 0
+  .slick-testimonial-btn
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    margin: auto
+  .slick-testimonial-btn.slick-disabled
+    cursor: pointer
+    opacity: 1
 
 .navs__item
   float: left
@@ -1756,9 +1774,19 @@ a, .a
   transition: background .3s
 
 @media screen and (max-width: 991px)
+  .navs_category-container
+    margin: 0
+    padding: 0
+    .slick-testimonial-btn
+      display: none
+    .navs__item
+      margin: 0 4px 8px
+    .navs__link
+      min-width: 133px
+
   .navs_category
     margin: 20px 0 5px
-    text-align: justify
+    text-align: center
     &:after
       content: ''
       display: inline-block
@@ -1767,8 +1795,6 @@ a, .a
   .navs__item
     float: none
     display: inline-block
-    margin-bottom: 8px
-    margin-right: 0
 
   .btn-tab
     padding: 12px 10px
