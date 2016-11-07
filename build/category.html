@@ -1,0 +1,1245 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Template</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#fff">
+  <link rel="stylesheet" media="all" href="css/style.css" >
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+  <header class="header container hidden-sm hidden-xs">
+      
+    <div class="header__top">
+      
+      <div class="header__left">
+        
+        <ul class="nav-link">
+          <li class="nav-link__item"><a class="nav-link__link" href="about.html">О компании</a></li> 
+          <li class="nav-link__item"><a class="nav-link__link" href="#"> Объекты</a></li> 
+          <li class="nav-link__item"><a class="nav-link__link" href="#">Доставка и оплата</a></li> 
+          <li class="nav-link__item"><a class="nav-link__link" href="#">Контакты</a></li> 
+        </ul>
+  
+      </div>
+  
+      <div class="header__info-block info-group">
+        <span class="info-group__item">
+          <span class="info-group__icon icon-clock-red"></span>
+          пн.-пт. 8.00-18.00
+        </span>
+  
+        <a class="info-group__item" href="mailto:zakaz@iss-gk.ru">
+          <span class="info-group__icon icon-mail-red"></span>
+          zakaz@iss-gk.ru
+        </a>
+  
+        <a class="info-group__item info-group__item_bold" href="tel:74995538140">
+          <span class="info-group__icon icon-tel-red"></span>
+          +7 499 553-81-40
+        </a>
+      </div>
+  
+    </div>
+    
+    <div class="header__bottom">
+  
+      <div class="header__left">
+        <a href="/" class="brand">
+          <div class="brand__img"><img src="./img/logo.png" alt="ИНЖЕНЕРНЫЕ И СТРОИТЕЛЬНЫЕ СИСТЕМЫ"></div>
+          <div class="brand__text">ИНЖЕНЕРНЫЕ <br> И СТРОИТЕЛЬНЫЕ СИСТЕМЫ</div>
+        </a>  
+      </div>
+  
+      <div class="header__right calculate-cost">
+        <div class="calculate-cost__text"><b>Удешевим смету</b> на инженерную <br>продукцию на 15-20%</div>
+        <div class="calculate-cost__icon"><span class="icon-red-arrow"></span></div>
+        <button type="button" class="btn btn-calc" data-toggle="modal" data-target="#calcModal">рассчитать заявку</button>
+      </div>
+    </div>
+  </header>
+  
+  
+  <header class="header-mobile visible-xs visible-sm">
+    <div class="header-mobile__container container">
+      <div class="header-mobile__btn">
+        <button type="button" class="navbar-toggle js-open-menu">
+          <span class="icon-bar__group">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </span>
+          
+          <span class="navbar-toggle__text">
+            Меню
+          </span>
+        </button>
+      </div>
+      
+      <div class="header-mobile__action header__right">
+        <div class="action-icon-group">
+          <a class="action-icon-group__item" href="#" title="Корзина"><span class="icon-m-tel"></span></a>
+          <a class="action-icon-group__item" href="#" title="Поиск"><span class="icon-m-search-head"></span></a>
+        </div>
+      </div>
+  
+      <a href="#" class="header-mobile__logo">
+        <img src="img/m-logo.png" alt="Главная">
+      </a>
+    </div>
+  </header>
+  
+  <div class="visible-xs visible-sm">
+    <form action="#" id="headerSearch" class="head-search">
+      <div class="input-group"> 
+        <input class="form-control" placeholder="Поиск по сайту"> 
+        <span class="input-group-btn"> 
+          <button class="btn btn-default" type="button">
+            <span class="icon-m-search-btn"></span>
+          </button> 
+        </span> 
+      </div>
+    </form>
+  </div>
+  
+  <nav class="m-navigation">
+    <div class="m-navigation__controll">
+      <button class="close-m-menu js-close-m-menu"><span class="icon-close-menu"></span></button>
+    </div>
+  
+    <div class="m-navigation__menu">
+      <ul class="m-menu">
+            <li class="m-menu__item m-menu__item_has-sub-menu">
+              <a class="m-menu__link" href="category.html">Каталог продукции</a>
+              <span class="m-menu__open-submenu"><span class="icon-open-submenu"></span></span>
+              <div class="m-menu__sub">
+                <div class="m-sub-menu">
+  
+                  <div class="m-sub-menu__block">
+                    <h3 class="sub-menu__title">ТРУБЫ</h3>
+  
+                    <ul class="sub-menu__nav">
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ПНД (ПЭ)</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ НПВХ</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <span class="sub-menu__nav-link active">ТРУБЫ ГОРФРИРОВАННЫЕ</span>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ППР</a>
+                      </li>
+                    </ul>
+                  </div>
+  
+                  <div class="m-sub-menu__block">
+                    <h3 class="sub-menu__title">ОБОРУДОВАНИЕ</h3>
+  
+                    <ul class="sub-menu__nav">
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ПНД (ПЭ)</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ НПВХ</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ГОРФРИРОВАННЫЕ</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ППР</a>
+                      </li>
+                    </ul>
+                  </div>
+  
+                  <div class="m-sub-menu__block">
+                    <h3 class="sub-menu__title">ОЧИСТНЫЕ СООРУЖЕНИЯ</h3>
+  
+                    <ul class="sub-menu__nav">
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ПНД (ПЭ)</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ НПВХ</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ГОРФРИРОВАННЫЕ</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ППР</a>
+                      </li>
+                    </ul>
+                  </div>
+                
+                </div>
+              </div>
+            </li>
+            <li class="m-menu__item"><a class="m-menu__link" href="#">Сферы применения</a></li>
+            <li class="m-menu__item"><a class="m-menu__link" href="#">Производители</a></li>
+            <li class="m-menu__item"><a class="m-menu__link" href="#">О компании</a></li>
+            <li class="m-menu__item"><a class="m-menu__link" href="#">Объекты</a></li>
+            <li class="m-menu__item"><a class="m-menu__link" href="#">Доставка и оплата</a></li>
+            <li class="m-menu__item"><a class="m-menu__link" href="#">Контакты</a></li>
+          </ul>
+    </div>
+  </nav>
+  
+  <nav class="navigation hidden-xs hidden-sm">
+    <div class="container">
+      <div class="row navigation__row ">
+        <div class="navigation__action">
+          <div class="action-icon-group hidden-xs hidden-sm">
+            <a class="action-icon-group__item" href="#" title="Поиск"><span class="icon-white-search"></span></a>
+            <a class="action-icon-group__item" href="#" title="Корзина"><span class="icon-white-cart"></span></a>
+            <a class="action-icon-group__item" href="#" title="Контакты"><span class="icon-white-people"></span></a>
+          </div>
+        </div>
+  
+        <div class="navigation__menu">
+          <ul class="menu">
+            <li class="menu__item menu__item_has-sub-menu">
+              <a class="menu__link" href="category.html">каталог продукции</a>
+              <span class="menu__open-submenu"></span>
+              <div class="menu__sub">
+                <div class="sub-menu">
+  
+                  <div class="sub-menu__block">
+                    <h3 class="sub-menu__title">ТРУБЫ</h3>
+  
+                    <ul class="sub-menu__nav">
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ПНД (ПЭ)</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ НПВХ</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <span class="sub-menu__nav-link active">ТРУБЫ ГОРФРИРОВАННЫЕ</span>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ППР</a>
+                      </li>
+                    </ul>
+                  </div>
+  
+                  <div class="sub-menu__block">
+                    <h3 class="sub-menu__title">ОБОРУДОВАНИЕ</h3>
+  
+                    <ul class="sub-menu__nav">
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ПНД (ПЭ)</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ НПВХ</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ГОРФРИРОВАННЫЕ</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ППР</a>
+                      </li>
+                    </ul>
+                  </div>
+  
+                  <div class="sub-menu__block">
+                    <h3 class="sub-menu__title">ОЧИСТНЫЕ СООРУЖЕНИЯ</h3>
+  
+                    <ul class="sub-menu__nav">
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ПНД (ПЭ)</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ НПВХ</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ГОРФРИРОВАННЫЕ</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ППР</a>
+                      </li>
+                    </ul>
+                  </div>
+                
+                </div>
+              </div>
+            </li>
+            <li class="menu__item"><a class="menu__link" href="#">Сферы применения</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">производители</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <aside class="container container_breadcrumbs hidden-xs hidden-sm">
+    <ol class="breadcrumb">
+      <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">ГЛАВНАЯ</a></li>
+      <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">КАТАЛОГ</a></li>
+      <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">ТРУБЫ ПНД</a></li>
+      <li class="breadcrumb__item active">ТЕХНИЧЕСКИЕ</li>
+    </ol>
+  </aside>
+
+  <main class="main main_inner-page"> 
+    <div class="container">
+      <h1>Трубы ПНД технические</h1>
+      <p>Трубы ПНД технические для подземной прокладки кабеля соответствуют ТУ 1215542688-2003. <br>Склад в г. Можайск, МО. Производство г. Воронеж</p>
+
+      <ul class="navs navs_category" role="tablist">
+        <li role="presentation" class="navs__item">
+          <a href="#" class="navs__link btn-tab">Водопроводные</a>
+        </li>
+
+        <li role="presentation" class="navs__item active">
+          <a href="#" class="navs__link btn-tab">газопроводные</a>
+        </li>
+
+        <li role="presentation" class="navs__item">
+          <a href="#" class="navs__link btn-tab">технические</a>
+        </li>
+
+        <li role="presentation" class="navs__item">
+          <a href="#" class="navs__link btn-tab">пнв-пвд</a>
+        </li>
+      </ul>
+
+      <div class="category-goods row">
+
+        <div class="category-good col-sm-4 col-md-3">
+          <div class="category-good__preview">
+            <a class="category-good__preview-link" href="card.html">
+              <img src="img/category/1.jpg" height="123" width="208" alt="">
+              <div class="category-good__preview-hover">
+                <div class="icon"><span class="icon-white-eye"></span></div>
+                <div class="text">
+                  технические характеристики
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="category-good__info">
+            <div class="category-good__info-left label-mark">В наличии</div>
+            <div class="category-good__info-right label-mark label-mark_production">Производство</div>
+          </div>
+          
+          <div class="category-good__content">
+            <div class="category-good__title">
+              <a href="card.html">Труба ПНД техническая 160 мм SDR 11.5</a>
+            </div>
+
+            <div class="category-good__text">
+              Труба для прокладки кабеля  ТУ 2121542874-635
+            </div>
+          </div>
+
+          <div class="category-good__price">от 127 руб./м</div>
+        </div><!-- /.category-good -->
+
+        <div class="category-good col-sm-4 col-md-3">
+          <div class="category-good__preview">
+            <a class="category-good__preview-link" href="card.html">
+              <img src="img/category/2.jpg" height="123" width="208" alt="">
+              <div class="category-good__preview-hover">
+                <div class="icon"><span class="icon-white-eye"></span></div>
+                <div class="text">
+                  технические характеристики
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="category-good__info">
+            <div class="category-good__info-left label-mark">В наличии</div>
+            <div class="category-good__info-right label-mark label-mark_production">Производство</div>
+          </div>
+          
+          <div class="category-good__content">
+            <div class="category-good__title">
+              <a href="card.html">Труба ПНД техническая 160 мм SDR 11.5</a>
+            </div>
+
+            <div class="category-good__text">
+              Труба для прокладки кабеля  ТУ 2121542874-635
+            </div>
+          </div>
+
+          <div class="category-good__price">от 127 руб./м</div>
+        </div><!-- /.category-good -->
+
+        <div class="category-good col-sm-4 col-md-3">
+          <div class="category-good__preview">
+            <a class="category-good__preview-link" href="card.html">
+              <img src="img/category/3.jpg" height="123" width="208" alt="">
+              <div class="category-good__preview-hover">
+                <div class="icon"><span class="icon-white-eye"></span></div>
+                <div class="text">
+                  технические характеристики
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="category-good__info">
+            <div class="category-good__info-left label-mark">В наличии</div>
+            <div class="category-good__info-right label-mark label-mark_production">Производство</div>
+          </div>
+          
+          <div class="category-good__content">
+            <div class="category-good__title">
+              <a href="card.html">Труба ПНД техническая 160 мм SDR 11.5</a>
+            </div>
+
+            <div class="category-good__text">
+              Труба для прокладки кабеля  ТУ 2121542874-635
+            </div>
+          </div>
+
+          <div class="category-good__price">от 127 руб./м</div>
+        </div><!-- /.category-good -->
+
+        <div class="category-good col-sm-4 col-md-3">
+          <div class="category-good__preview">
+            <a class="category-good__preview-link" href="card.html">
+              <img src="img/category/1.jpg" height="123" width="208" alt="">
+              <div class="category-good__preview-hover">
+                <div class="icon"><span class="icon-white-eye"></span></div>
+                <div class="text">
+                  технические характеристики
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="category-good__info">
+            <div class="category-good__info-left label-mark">В наличии</div>
+            <div class="category-good__info-right label-mark label-mark_production">Производство</div>
+          </div>
+          
+          <div class="category-good__content">
+            <div class="category-good__title">
+              <a href="card.html">Труба ПНД техническая 160 мм SDR 11.5</a>
+            </div>
+
+            <div class="category-good__text">
+              Труба для прокладки кабеля  ТУ 2121542874-635
+            </div>
+          </div>
+
+          <div class="category-good__price">от 127 руб./м</div>
+        </div><!-- /.category-good -->
+
+        <div class="category-good col-sm-4 col-md-3">
+          <div class="category-good__preview">
+            <a class="category-good__preview-link" href="card.html">
+              <img src="img/category/1.jpg" height="123" width="208" alt="">
+              <div class="category-good__preview-hover">
+                <div class="icon"><span class="icon-white-eye"></span></div>
+                <div class="text">
+                  технические характеристики
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="category-good__info">
+            <div class="category-good__info-left label-mark">В наличии</div>
+            <div class="category-good__info-right label-mark label-mark_production">Производство</div>
+          </div>
+          
+          <div class="category-good__content">
+            <div class="category-good__title">
+              <a href="card.html">Труба ПНД техническая 160 мм SDR 11.5</a>
+            </div>
+
+            <div class="category-good__text">
+              Труба для прокладки кабеля  ТУ 2121542874-635
+            </div>
+          </div>
+
+          <div class="category-good__price">от 127 руб./м</div>
+        </div><!-- /.category-good -->
+
+        <div class="category-good col-sm-4 col-md-3">
+          <div class="category-good__preview">
+            <a class="category-good__preview-link" href="card.html">
+              <img src="img/category/2.jpg" height="123" width="208" alt="">
+              <div class="category-good__preview-hover">
+                <div class="icon"><span class="icon-white-eye"></span></div>
+                <div class="text">
+                  технические характеристики
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="category-good__info">
+            <div class="category-good__info-left label-mark">В наличии</div>
+            <div class="category-good__info-right label-mark label-mark_production">Производство</div>
+          </div>
+          
+          <div class="category-good__content">
+            <div class="category-good__title">
+              <a href="card.html">Труба ПНД техническая 160 мм SDR 11.5</a>
+            </div>
+
+            <div class="category-good__text">
+              Труба для прокладки кабеля  ТУ 2121542874-635
+            </div>
+          </div>
+
+          <div class="category-good__price">от 127 руб./м</div>
+        </div><!-- /.category-good -->
+
+        <div class="category-good col-sm-4 col-md-3">
+          <div class="category-good__preview">
+            <a class="category-good__preview-link" href="card.html">
+              <img src="img/category/3.jpg" height="123" width="208" alt="">
+              <div class="category-good__preview-hover">
+                <div class="icon"><span class="icon-white-eye"></span></div>
+                <div class="text">
+                  технические характеристики
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="category-good__info">
+            <div class="category-good__info-left label-mark">В наличии</div>
+            <div class="category-good__info-right label-mark label-mark_production">Производство</div>
+          </div>
+          
+          <div class="category-good__content">
+            <div class="category-good__title">
+              <a href="card.html">Труба ПНД техническая 160 мм SDR 11.5</a>
+            </div>
+
+            <div class="category-good__text">
+              Труба для прокладки кабеля  ТУ 2121542874-635
+            </div>
+          </div>
+
+          <div class="category-good__price">от 127 руб./м</div>
+        </div><!-- /.category-good -->
+
+        <div class="category-good col-sm-4 col-md-3">
+          <div class="category-good__preview">
+            <a class="category-good__preview-link" href="card.html">
+              <img src="img/category/1.jpg" height="123" width="208" alt="">
+              <div class="category-good__preview-hover">
+                <div class="icon"><span class="icon-white-eye"></span></div>
+                <div class="text">
+                  технические характеристики
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="category-good__info">
+            <div class="category-good__info-left label-mark">В наличии</div>
+            <div class="category-good__info-right label-mark label-mark_production">Производство</div>
+          </div>
+          
+          <div class="category-good__content">
+            <div class="category-good__title">
+              <a href="card.html">Труба ПНД техническая 160 мм SDR 11.5</a>
+            </div>
+
+            <div class="category-good__text">
+              Труба для прокладки кабеля  ТУ 2121542874-635
+            </div>
+          </div>
+
+          <div class="category-good__price">от 127 руб./м</div>
+        </div><!-- /.category-good -->
+
+        <div class="category-good col-sm-4 col-md-3">
+          <div class="category-good__preview">
+            <a class="category-good__preview-link" href="card.html">
+              <img src="img/category/1.jpg" height="123" width="208" alt="">
+              <div class="category-good__preview-hover">
+                <div class="icon"><span class="icon-white-eye"></span></div>
+                <div class="text">
+                  технические характеристики
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="category-good__info">
+            <div class="category-good__info-left label-mark">В наличии</div>
+            <div class="category-good__info-right label-mark label-mark_production">Производство</div>
+          </div>
+          
+          <div class="category-good__content">
+            <div class="category-good__title">
+              <a href="card.html">Труба ПНД техническая 160 мм SDR 11.5</a>
+            </div>
+
+            <div class="category-good__text">
+              Труба для прокладки кабеля  ТУ 2121542874-635
+            </div>
+          </div>
+
+          <div class="category-good__price">от 127 руб./м</div>
+        </div><!-- /.category-good -->
+
+        <div class="category-good col-sm-4 col-md-3">
+          <div class="category-good__preview">
+            <a class="category-good__preview-link" href="card.html">
+              <img src="img/category/2.jpg" height="123" width="208" alt="">
+              <div class="category-good__preview-hover">
+                <div class="icon"><span class="icon-white-eye"></span></div>
+                <div class="text">
+                  технические характеристики
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="category-good__info">
+            <div class="category-good__info-left label-mark">В наличии</div>
+            <div class="category-good__info-right label-mark label-mark_production">Производство</div>
+          </div>
+          
+          <div class="category-good__content">
+            <div class="category-good__title">
+              <a href="card.html">Труба ПНД техническая 160 мм SDR 11.5</a>
+            </div>
+
+            <div class="category-good__text">
+              Труба для прокладки кабеля  ТУ 2121542874-635
+            </div>
+          </div>
+
+          <div class="category-good__price">от 127 руб./м</div>
+        </div><!-- /.category-good -->
+
+        <div class="category-good col-sm-4 col-md-3">
+          <div class="category-good__preview">
+            <a class="category-good__preview-link" href="card.html">
+              <img src="img/category/3.jpg" height="123" width="208" alt="">
+              <div class="category-good__preview-hover">
+                <div class="icon"><span class="icon-white-eye"></span></div>
+                <div class="text">
+                  технические характеристики
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="category-good__info">
+            <div class="category-good__info-left label-mark">В наличии</div>
+            <div class="category-good__info-right label-mark label-mark_production">Производство</div>
+          </div>
+          
+          <div class="category-good__content">
+            <div class="category-good__title">
+              <a href="card.html">Труба ПНД техническая 160 мм SDR 11.5</a>
+            </div>
+
+            <div class="category-good__text">
+              Труба для прокладки кабеля  ТУ 2121542874-635
+            </div>
+          </div>
+
+          <div class="category-good__price">от 127 руб./м</div>
+        </div><!-- /.category-good -->
+
+        <div class="category-good col-sm-4 col-md-3">
+          <div class="category-good__preview">
+            <a class="category-good__preview-link" href="card.html">
+              <img src="img/category/1.jpg" height="123" width="208" alt="">
+              <div class="category-good__preview-hover">
+                <div class="icon"><span class="icon-white-eye"></span></div>
+                <div class="text">
+                  технические характеристики
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="category-good__info">
+            <div class="category-good__info-left label-mark">В наличии</div>
+            <div class="category-good__info-right label-mark label-mark_production">Производство</div>
+          </div>
+          
+          <div class="category-good__content">
+            <div class="category-good__title">
+              <a href="card.html">Труба ПНД техническая 160 мм SDR 11.5</a>
+            </div>
+
+            <div class="category-good__text">
+              Труба для прокладки кабеля  ТУ 2121542874-635
+            </div>
+          </div>
+
+          <div class="category-good__price">от 127 руб./м</div>
+        </div><!-- /.category-good -->
+
+      </div>
+
+      <div class="category-goods-action">
+        <a class="btn btn-all-brand" href="#">Показать еще 15 товаров</a>
+      </div>
+    </div>
+
+    <div class="container visible-xs">
+      <div class="additional-good-out">
+        <h3 class="text-left">ДОПОЛНИТЕ ЗАКАЗ</h3>
+
+        <div class="additional-good row">
+          <div class="col-md-3 col-sm-6 additional-good__item">
+            <a href="card.html" class="additional-good__link">
+              <span class="additional-good__preview">
+                <img src="img/aditional-order/1.jpg" height="61" width="87" alt="">
+              </span>
+
+              <span class="additional-good__content">
+                <span class="additional-good__title">Фитинги ПНД</span>
+                <span class="additional-good__price">147 р/м</span>
+              </span>
+            </a>
+          </div>
+
+          <div class="col-md-3 col-sm-6 additional-good__item">
+            <a href="card.html" class="additional-good__link">
+              <span class="additional-good__preview">
+                <img src="img/aditional-order/2.jpg" height="61" width="87" alt="">
+              </span>
+
+              <span class="additional-good__content">
+                <span class="additional-good__title">Фитинги ПНД</span>
+                <span class="additional-good__price">147 р/м</span>
+              </span>
+            </a>
+          </div>
+          
+          <div class="col-md-3 col-sm-6 additional-good__item">
+            <a href="card.html" class="additional-good__link">
+              <span class="additional-good__preview">
+                <img src="img/aditional-order/3.jpg" height="61" width="87" alt="">
+              </span>
+
+              <span class="additional-good__content">
+                <span class="additional-good__title">Кабельные колодцы</span>
+                <span class="additional-good__price">147 р/м</span>
+              </span>
+            </a>
+          </div>
+
+          <div class="col-md-3 col-sm-6 additional-good__item">
+            <a href="card.html" class="additional-good__link">
+              <span class="additional-good__preview">
+                <img src="img/aditional-order/1.jpg" height="61" width="87" alt="">
+              </span>
+
+              <span class="additional-good__content">
+                <span class="additional-good__title">Фитинги ПНД</span>
+                <span class="additional-good__price">147 р/м</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div class="show-more-client text-center">
+          <a href="#"><span class="link-dotted">ПОКАЗАТЬ ЕЩЕ</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container visible-xs visible-sm">
+      <form class="form-inline">
+        <div class="form-header text-left">
+          <h4 class="form-title">У ВАС ЕСТЬ СПИСОК ПРОДУКЦИИ?</h4>
+          <p>Получите счет за 1 час!</p>
+        </div>
+        <div class="form-body">
+          <div class="form-group">
+            <input type="tel" name="productSearch[phone]" id="productSearchPhone" class="form-control" placeholder="Ваш телефон*">
+          </div>
+
+          <div class="form-group">
+            <input type="mail" name="productSearch[email]" id="productSearchEmail" class="form-control" placeholder="Ваш e-mail*">
+          </div>
+
+          <div class="form-action">
+            <button type="submit" class="btn btn-calc btn-block">рассчитать заявку</button>
+          </div>
+        </div>
+      </form><!-- /.modal-content -->
+    </div>
+
+    <section class="video-gallery-section fill-grey">
+      <div class="container">
+        <h2 class="title-primary">Наш канал на Youtube</h2>
+
+        <div class="video-gallery-row">
+          <div class="video-gallery js-video-gallery" data-slides-to-show="4">
+            <div class="video-gallery__item">
+              <a href="http//www.youtube.com/watch?v=0O2aH4XLbto" class="video-gallery__preview js-video">
+                <img src="img/video/1.jpg" height="111" width="178" alt="Хотите купить канализационные трубы">
+              </a>
+              <div class="videp-gallery__title">
+                <a href="http://www.youtube.com/watch?v=GEU_CCCQRqU" class="js-video">Хотите купить канализационные трубы?</a>
+              </div>
+              <div class="video-gallery__action">
+                <button class="video-galley__btn"><span class="icon-shows"></span> 1150</button>
+                <button class="video-galley__btn"><span class="icon-likes"></span> 10756</button>
+              </div>
+            </div>
+
+            <div class="video-gallery__item">
+              <a href="http://www.youtube.com/watch?v=8kZdR8dFxDY" class="video-gallery__preview js-video">
+                <img src="img/video/2.jpg" height="111" width="178" alt="Хотите купить канализационные трубы">
+              </a>
+              <div class="videp-gallery__title">
+                <a href="http://www.youtube.com/watch?v=8kZdR8dFxDY" class="js-video">Хотите купить канализационные трубы?</a>
+              </div>
+              <div class="video-gallery__action">
+                <button class="video-galley__btn"><span class="icon-shows"></span> 1150</button>
+                <button class="video-galley__btn"><span class="icon-likes"></span> 10756</button>
+              </div>
+            </div>
+
+            <div class="video-gallery__item">
+              <a href="http://www.youtube.com/watch?v=8kZdR8dFxDY" class="video-gallery__preview js-video">
+                <img src="img/video/3.jpg" height="111" width="178" alt="Хотите купить канализационные трубы">
+              </a>
+              <div class="videp-gallery__title">
+                <a href="http://www.youtube.com/watch?v=8kZdR8dFxDY" class="js-video">Хотите купить канализационные трубы?</a>
+              </div>
+              <div class="video-gallery__action">
+                <button class="video-galley__btn"><span class="icon-shows"></span> 1150</button>
+                <button class="video-galley__btn"><span class="icon-likes"></span> 10756</button>
+              </div>
+            </div>
+
+            <div class="video-gallery__item">
+              <a href="http://www.youtube.com/watch?v=8kZdR8dFxDY" class="video-gallery__preview js-video">
+                <img src="img/video/4.jpg" height="111" width="178" alt="Хотите купить канализационные трубы">
+              </a>
+              <div class="videp-gallery__title">
+                <a href="http://www.youtube.com/watch?v=8kZdR8dFxDY" class="js-video">Хотите купить канализационные трубы?</a>
+              </div>
+              <div class="video-gallery__action">
+                <button class="video-galley__btn"><span class="icon-shows"></span> 1150</button>
+                <button class="video-galley__btn"><span class="icon-likes"></span> 10756</button>
+              </div>
+            </div>
+
+            <div class="video-gallery__item">
+              <a href="http://www.youtube.com/watch?v=8kZdR8dFxDY" class="video-gallery__preview js-video">
+                <img src="img/video/1.jpg" height="111" width="178" alt="Хотите купить канализационные трубы">
+              </a>
+              <div class="videp-gallery__title">
+                <a href="http://www.youtube.com/watch?v=8kZdR8dFxDY" class="js-video">Хотите купить канализационные трубы?</a>
+              </div>
+              <div class="video-gallery__action">
+                <button class="video-galley__btn"><span class="icon-shows"></span> 1150</button>
+                <button class="video-galley__btn"><span class="icon-likes"></span> 10756</button>
+              </div>
+            </div>
+
+            <div class="video-gallery__item">
+              <a href="http://www.youtube.com/watch?v=8kZdR8dFxDY" class="video-gallery__preview js-video">
+                <img src="img/video/2.jpg" height="111" width="178" alt="Хотите купить канализационные трубы">
+              </a>
+              <div class="videp-gallery__title">
+                <a href="http://www.youtube.com/watch?v=8kZdR8dFxDY" class="js-video">Хотите купить канализационные трубы?</a>
+              </div>
+              <div class="video-gallery__action">
+                <button class="video-galley__btn"><span class="icon-shows"></span> 1150</button>
+                <button class="video-galley__btn"><span class="icon-likes"></span> 10756</button>
+              </div>
+            </div>
+          </div>
+          <button class="slick-testimonial-btn slick-testimonial-next"><span class="icon-t-slick-rightt"></span></button>
+        </div>
+      </div>
+    </section>
+
+    <div class="container shipments-slider">
+      <h2 class="title-primary">Фото с отгрузок</h2>
+      
+      <div class="testimonial-slider-wrap">
+        <div class="shipments js-testimonial-slider" data-slides-to-show="5">
+          <div class="shipments__item">
+            <div class="shipments__preview">
+              <a class="js-testimonial-gallery" href="img/shipments/1.jpg">
+                <img src="img/shipments/1.jpg" height="123" width="173" alt="Отгрузка труб ПНД">
+                <div class="shipments__preview-hover">
+                  <div class="icon"><span class="icon-catalog-search"></span></div>
+                  <div class="text">посмотреть</div>  
+                </div>
+              </a>
+            </div>
+            <div class="shipments__title">
+              <a class="js-testimonial-gallery" href="img/shipments/1.jpg">Отгрузка труб ПНД для ООО Спецстрой</a>
+            </div>
+          </div>
+
+          <div class="shipments__item">
+            <div class="shipments__preview">
+              <a class="js-testimonial-gallery" href="img/shipments/2.jpg">
+                <img src="img/shipments/2.jpg" height="123" width="173" alt="Отгрузка труб ПНД">
+                <div class="shipments__preview-hover">
+                  <div class="icon"><span class="icon-catalog-search"></span></div>
+                  <div class="text">посмотреть</div>  
+                </div>
+              </a>
+            </div>
+            <div class="shipments__title">
+              <a class="js-testimonial-gallery" href="img/shipments/2.jpg">Отгрузка труб ПНД для ООО Спецстрой</a>
+            </div>
+          </div>
+
+          <div class="shipments__item">
+            <div class="shipments__preview">
+              <a class="js-testimonial-gallery" href="img/shipments/1.jpg">
+                <img src="img/shipments/1.jpg" height="123" width="173" alt="Отгрузка труб ПНД">
+                <div class="shipments__preview-hover">
+                  <div class="icon"><span class="icon-catalog-search"></span></div>
+                  <div class="text">посмотреть</div>  
+                </div>
+              </a>
+            </div>
+            <div class="shipments__title">
+              <a class="js-testimonial-gallery" href="img/shipments/1.jpg">Отгрузка труб ПНД для ООО Спецстрой</a>
+            </div>
+          </div>
+
+          <div class="shipments__item">
+            <div class="shipments__preview">
+              <a class="js-testimonial-gallery" href="img/shipments/2.jpg">
+                <img src="img/shipments/2.jpg" height="123" width="173" alt="Отгрузка труб ПНД">
+                <div class="shipments__preview-hover">
+                  <div class="icon"><span class="icon-catalog-search"></span></div>
+                  <div class="text">посмотреть</div>  
+                </div>
+              </a>
+            </div>
+            <div class="shipments__title">
+              <a class="js-testimonial-gallery" href="img/shipments/2.jpg">Отгрузка труб ПНД для ООО Спецстрой</a>
+            </div>
+          </div>
+
+          <div class="shipments__item">
+            <div class="shipments__preview">
+              <a class="js-testimonial-gallery" href="img/shipments/1.jpg">
+                <img src="img/shipments/1.jpg" height="123" width="173" alt="Отгрузка труб ПНД">
+                <div class="shipments__preview-hover">
+                  <div class="icon"><span class="icon-catalog-search"></span></div>
+                  <div class="text">посмотреть</div>  
+                </div>
+              </a>
+            </div>
+            <div class="shipments__title">
+              <a class="js-testimonial-gallery" href="img/shipments/1.jpg">Отгрузка труб ПНД для ООО Спецстрой</a>
+            </div>
+          </div>
+
+          <div class="shipments__item">
+            <div class="shipments__preview">
+              <a class="js-testimonial-gallery" href="img/shipments/2.jpg">
+                <img src="img/shipments/2.jpg" height="123" width="173" alt="Отгрузка труб ПНД">
+                <div class="shipments__preview-hover">
+                  <div class="icon"><span class="icon-catalog-search"></span></div>
+                  <div class="text">посмотреть</div>  
+                </div>
+              </a>
+            </div>
+            <div class="shipments__title">
+              <a class="js-testimonial-gallery" href="img/shipments/2.jpg">Отгрузка труб ПНД для ООО Спецстрой</a>
+            </div>
+          </div>
+
+          <div class="shipments__item">
+            <div class="shipments__preview">
+              <a class="js-testimonial-gallery" href="img/shipments/1.jpg">
+                <img src="img/shipments/1.jpg" height="123" width="173" alt="Отгрузка труб ПНД">
+                <div class="shipments__preview-hover">
+                  <div class="icon"><span class="icon-catalog-search"></span></div>
+                  <div class="text">посмотреть</div>  
+                </div>
+              </a>
+            </div>
+            <div class="shipments__title">
+              <a class="js-testimonial-gallery" href="img/shipments/1.jpg">Отгрузка труб ПНД для ООО Спецстрой</a>
+            </div>
+          </div>
+
+          <div class="shipments__item">
+            <div class="shipments__preview">
+              <a class="js-testimonial-gallery" href="img/shipments/2.jpg">
+                <img src="img/shipments/2.jpg" height="123" width="173" alt="Отгрузка труб ПНД">
+                <div class="shipments__preview-hover">
+                  <div class="icon"><span class="icon-catalog-search"></span></div>
+                  <div class="text">посмотреть</div>  
+                </div>
+              </a>
+            </div>
+            <div class="shipments__title">
+              <a class="js-testimonial-gallery" href="img/shipments/2.jpg">Отгрузка труб ПНД для ООО Спецстрой</a>
+            </div>
+          </div>
+
+          <div class="shipments__item">
+            <div class="shipments__preview">
+              <a class="js-testimonial-gallery" href="img/shipments/1.jpg">
+                <img src="img/shipments/1.jpg" height="123" width="173" alt="Отгрузка труб ПНД">
+                <div class="shipments__preview-hover">
+                  <div class="icon"><span class="icon-catalog-search"></span></div>
+                  <div class="text">посмотреть</div>  
+                </div>
+              </a>
+            </div>
+            <div class="shipments__title">
+              <a class="js-testimonial-gallery" href="img/shipments/1.jpg">Отгрузка труб ПНД для ООО Спецстрой</a>
+            </div>
+          </div>
+
+          <div class="shipments__item">
+            <div class="shipments__preview">
+              <a class="js-testimonial-gallery" href="img/shipments/2.jpg">
+                <img src="img/shipments/2.jpg" height="123" width="173" alt="Отгрузка труб ПНД">
+                <div class="shipments__preview-hover">
+                  <div class="icon"><span class="icon-catalog-search"></span></div>
+                  <div class="text">посмотреть</div>  
+                </div>
+              </a>
+            </div>
+            <div class="shipments__title">
+              <a class="js-testimonial-gallery" href="img/shipments/2.jpg">Отгрузка труб ПНД для ООО Спецстрой</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-slider-control">
+          <button class="slick-testimonial-btn slick-testimonial-prev"><span class="icon-t-slick-left"></span></button>
+          <div class="testimonial-slider-dots"></div>
+          <button class="slick-testimonial-btn slick-testimonial-next"><span class="icon-t-slick-rightt"></span></button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+
+    <div class="footer__top">
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="footer__menu col-md-9 col-sm-8 hidden-xs">
+
+            <div class="foot-nav">
+
+              <h4 class="foot-nav__title">О компании</h4>
+
+              <ul class="foot-menu">
+
+                <li class="foot-menu__item"><a class="foot-menu__link" href="about.html">О компании</a></li>
+
+                <li class="foot-menu__item"><a class="foot-menu__link" href="#">Объекты</a></li>
+
+                <li class="foot-menu__item"><a class="foot-menu__link" href="#">Доставка и оплата</a></li>
+
+                <li class="foot-menu__item"><a class="foot-menu__link" href="#">Контакты</a></li>
+
+              </ul>
+
+            </div>
+
+  
+
+            <div class="foot-nav">
+
+              <h4 class="foot-nav__title">Каталог</h4>
+
+              <ul class="foot-menu">
+
+                <li class="foot-menu__item"><a class="foot-menu__link" href="#">Трубы полиэтиленовые</a></li>
+
+                <li class="foot-menu__item"><a class="foot-menu__link" href="#">Трубы кофрированные</a></li>
+
+                <li class="foot-menu__item"><a class="foot-menu__link" href="#">Трубы стальные</a></li>
+
+                <li class="foot-menu__item"><a class="foot-menu__link" href="#">Краны стальные шаровые</a></li>
+
+                <li class="foot-menu__item"><a class="foot-menu__link" href="#">Задвижки</a></li>
+
+              </ul>
+
+            </div>
+
+  
+
+            <div class="foot-nav">
+
+              <h4 class="foot-nav__title">Сферы применения</h4>
+
+              <ul class="foot-menu">
+
+                <li class="foot-menu__item"><a class="foot-menu__link" href="#">О компании</a></li>
+
+                <li class="foot-menu__item"><a class="foot-menu__link" href="#">Объекты</a></li>
+
+                <li class="foot-menu__item"><a class="foot-menu__link" href="#">Доставка и оплата</a></li>
+
+                <li class="foot-menu__item"><a class="foot-menu__link" href="#">Контакты</a></li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+  
+
+          <div class="footer__contact col-md-3 col-sm-4">
+
+            <div class="info-group info-group__vertical">
+
+              <a class="info-group__item info-group__item_bold" href="tel:74995538140">
+
+                <span class="info-group__icon icon-tel-red"></span>
+
+                +7 499 553-81-40
+
+              </a>
+
+  
+
+              <a class="info-group__item" href="mailto:zakaz@iss-gk.ru">
+
+                <span class="info-group__icon icon-mail-red"></span>
+
+                zakaz@iss-gk.ru
+
+              </a>
+
+  
+
+              <span class="info-group__item">
+
+                <span class="info-group__icon icon-clock-red"></span>
+
+                пн.-пт. 8.00-18.00
+
+              </span>
+
+        
+
+              <span class="info-group__item">
+
+                <span class="info-group__icon icon-footer-map"></span>
+
+                Офис продаж: г. Мытищи, Олимпийский пр-т 13с1, корпус Б
+
+              </span>
+
+              
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="footer__link hidden-xs">
+
+          <a href="#">Реквизиты компании</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  
+
+    <div class="footer__bottom container">
+
+      <div class="footer__copyright">
+
+        Вся информация на сайте – собственность интернет-магазина auto-welara.ru. <br>
+
+        Публикация информации с сайта vseinstrumenti.ru без разрешения запрещена. Все права защищены.
+
+      </div>
+
+  
+
+      <div class="footer__company">2010-2016 ООО «ИСС»</div>
+
+    </div>
+
+  </footer>
+</div>
+<!-- END out-->
+<div id="calcModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-sm" role="document">
+    <form class="modal-content" id="productSearch" name="productSearch">
+      <div class="modal-header text-center">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Не хотите тратить время на поиск продукции?</h4>
+        <p>Пришлите заявку и мы все <br> сделаем за Вас в течение 1 часа!</p>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <input type="tel" name="productSearch[phone]" id="productSearchPhone" class="form-control" placeholder="Ваш телефон*">
+        </div>
+
+        <div class="form-group">
+          <input type="mail" name="productSearch[email]" id="productSearchEmail" class="form-control" placeholder="Ваш e-mail*">
+        </div>
+
+        <div class="form-group">
+          <div class="a input-upload">
+            <input type="file" name="" id=""><span class="icon-link-1"></span> 
+            <span class="link-underline">Прикрепить заявку</span>
+          </div> <br>
+          <a data-toggle="collapse" href="#productSearchTextarea" aria-expanded="false" aria-controls="productSearchTextarea">
+            <span class="icon-link-2"></span> <span class="link-underline">Добавить комментарий</span>
+          </a>
+        </div>
+
+        <div id="productSearchTextarea" class="form-group collapse">
+          <textarea name="productSearch[comment]" id="productSearchComment" rows="5" class="form-control" placeholder="Ваш комментарий"></textarea>
+        </div>
+
+        <div class="modal-action">
+          <button type="submit" class="btn btn-calc btn-block">рассчитать заявку</button>
+        </div>
+      </div>
+    </form><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script src="js/app.js"></script>
+</body>
+</html>

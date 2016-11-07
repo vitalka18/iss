@@ -1,0 +1,216 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Template</title>
+  //=include partials/head.html
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+  //=include partials/header.html
+  
+  <aside class="container container_breadcrumbs hidden-xs hidden-sm">
+    <ol class="breadcrumb">
+      <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">ГЛАВНАЯ</a></li>
+      <li class="breadcrumb__item active">о компании</li>
+    </ol>
+  </aside>
+
+  <main class="main main_inner-page"> 
+    <div class="container">
+      <h1>О компании</h1>
+
+      <div class="tab">
+        <!-- Nav tabs -->
+        <ul class="navs" role="tablist">
+          <li role="presentation" class="navs__item active">
+            <a href="#about-us" class="navs__link btn-tab" aria-controls="about-us" role="tab" data-toggle="tab">о нас</a>
+          </li>
+
+          <li role="presentation" class="navs__item">
+            <a href="#documentation" class="navs__link btn-tab" aria-controls="documentation" role="tab" data-toggle="tab">документация</a>
+          </li>
+
+          <li role="presentation" class="navs__item">
+            <a href="#requisites" class="navs__link btn-tab" aria-controls="requisites" role="tab" data-toggle="tab">реквизиты</a>
+          </li>
+
+          <li role="presentation" class="navs__item">
+            <a href="#vacancies" class="navs__link btn-tab" aria-controls="vacancies" role="tab" data-toggle="tab">вакансии</a>
+          </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <article role="tabpanel" class="tab-pane active" id="about-us">
+            <p>Когда речь заходит о прокладывании современных инженерных систем, трубы ПНД становятся наиболее оптимальным вариантом. Водопроводные трубы ПНД имеют множество положительных характеристик. Основной из них является малый вес конструкций, который значительно упрощает транспортировку и монтаж. Таким образом, использование полимерного трубопровода позволяет существенно сэкономить на привлечении тяжелой техники.</p>
+          </article>
+
+          <article role="tabpanel" class="tab-pane" id="documentation">
+            документация
+          </article>
+
+          <article role="tabpanel" class="tab-pane" id="requisites">
+            реквизиты
+          </article>
+
+          <article role="tabpanel" class="tab-pane" id="vacancies">
+            вакансии
+          </article>
+        </div>
+      </div>
+
+      <h2>Наши клиенты</h2>
+      
+      <table class="our-client">
+        <tr>
+          <td>
+            <a href="#">
+              <img src="img/our-clients/1.jpg" height="43" width="123" alt="">
+            </a>
+          </td>
+          <td>
+            <a href="#">
+              <img src="img/our-clients/2.jpg" height="42" width="126" alt="">
+            </a>
+          </td>
+          <td>
+            <a href="#">
+              <img src="img/our-clients/3.jpg" height="55" width="156" alt="">
+            </a>
+          </td>
+          <td>
+            <a href="#">
+              <img src="img/our-clients/4.jpg" height="39" width="84" alt="">
+            </a>
+          </td>
+          <td>
+            <a href="#">
+              <img src="img/our-clients/5.jpg" height="63" width="85" alt="">
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#">
+              <img src="img/our-clients/6.jpg" height="48" width="129" alt="">
+            </a>
+          </td>
+          <td>
+            <a href="#">
+              <img src="img/our-clients/7.jpg" height="28" width="144" alt="">
+            </a>
+          </td>
+          <td>
+            <a href="#">
+              <img src="img/our-clients/8.jpg" height="43" width="162" alt="">
+            </a>
+          </td>
+          <td>
+            <a href="#">
+              <img src="img/our-clients/9.jpg" height="60" width="57" alt="">
+            </a>
+          </td>
+          <td>
+            <a href="#">
+              <img src="img/our-clients/10.jpg" height="43" width="76" alt="">
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <a href="#">
+              <img src="img/our-clients/11.jpg" height="56" width="77" alt="">
+            </a>
+          </td>
+          <td>
+            <a href="#">
+              <img src="img/our-clients/12.jpg" height="40" width="142" alt="">
+            </a>
+          </td>
+          <td>
+            <a href="#">
+              <img src="img/our-clients/13.jpg" height="42" width="162" alt="">
+            </a>
+          </td>
+          <td>
+            <a href="#">
+              <img src="img/our-clients/14.jpg" height="60" width="73" alt="">
+            </a>
+          </td>
+          <td>
+            <a href="#">
+              <img src="img/our-clients/15.jpg" height="33" width="92" alt="">
+            </a>
+          </td>
+        </tr>
+      </table>
+
+      <div class="show-more-client text-center">
+        <a href="#"><span class="link-dotted">ПОКАЗАТЬ ЕЩЕ</span></a>
+      </div>
+
+      <h2>Благодарственные письма</h2>
+
+      <div class="testimonial-slider-wrap">
+        <div class="testimonial-slider js-testimonial-slider" data-slides-to-show="5">
+          <div class="testimonial-slider__item">
+            <a class="testimonial-slider__link js-testimonial-gallery" href="img/thank/thank1.jpg">
+              <img src="img/thank/thank1.jpg" height="209" width="158" alt="">
+            </a>
+          </div>
+
+          <div class="testimonial-slider__item">
+            <a class="testimonial-slider__link js-testimonial-gallery" href="img/thank/thank2.jpg">
+              <img src="img/thank/thank2.jpg" height="209" width="158" alt="">
+            </a>
+          </div>
+
+          <div class="testimonial-slider__item">
+            <a class="testimonial-slider__link js-testimonial-gallery" href="img/thank/thank1.jpg">
+              <img src="img/thank/thank1.jpg" height="209" width="158" alt="">
+            </a>
+          </div>
+
+          <div class="testimonial-slider__item">
+            <a class="testimonial-slider__link js-testimonial-gallery" href="img/thank/thank2.jpg">
+              <img src="img/thank/thank2.jpg" height="209" width="158" alt="">
+            </a>
+          </div>
+
+          <div class="testimonial-slider__item">
+            <a class="testimonial-slider__link js-testimonial-gallery" href="img/thank/thank1.jpg">
+              <img src="img/thank/thank1.jpg" height="209" width="158" alt="">
+            </a>
+          </div>
+
+          <div class="testimonial-slider__item">
+            <a class="testimonial-slider__link js-testimonial-gallery" href="img/thank/thank2.jpg">
+              <img src="img/thank/thank2.jpg" height="209" width="158" alt="">
+            </a>
+          </div>
+        </div>
+
+        <div class="testimonial-slider-control">
+          <button class="slick-testimonial-btn slick-testimonial-prev"><span class="icon-t-slick-left"></span></button>
+          <div class="testimonial-slider-dots"></div>
+          <button class="slick-testimonial-btn slick-testimonial-next"><span class="icon-t-slick-rightt"></span></button>
+        </div>
+      </div>
+
+      <div class="about-resentation text-center">
+        <a class="btn btn-all-brand" href="#">Презентация о компании</a>
+      </div>
+    </div>
+
+    
+  </main>
+
+  //=include partials/footer.html
+</div>
+<!-- END out-->
+//=include partials/foot.html
+</body>
+</html>

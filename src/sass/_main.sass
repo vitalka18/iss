@@ -1,13 +1,70 @@
+//==============================================================================
+// helper
+//==============================================================================
 
+.fill-grey
+  background: #f9f9f9
+  padding-bottom: 70px
+  .title-primary
+    margin-top: 60px
 //==============================================================================
 // Header
 //==============================================================================
 .header
-  margin-bottom: 5px
+  margin-bottom: 3px
+
+.header-mobile
+  background: #112232
+  padding: 6px 0 3px
+
+.header-mobile__logo
+  display: block
+  width: 53px
+  margin: 0 auto
+
+.header-mobile__action
+  margin: 11px 0 0
+  .action-icon-group
+    margin: 0 -7px 0 0
+
+.navbar-toggle
+  float: left
+  overflow: hidden
+  width: 78px
+  margin: 11px 0 0
+  padding: 12px 0
+  border: none
+  .icon-bar__group
+    display: block
+    width: 25px
+    float: left
+
+  .icon-bar
+    width: 25px
+    background: #3498db
+
+.navbar-toggle__text
+  display: block
+  margin-left: 35px
+  font-size: 16px
+  color: #fff
+  line-height: 1
+
+.head-search
+  padding: 9px 15px
+
+.head-search
+  .btn
+    height: 46px
+    border: none
+    border-radius: 0
+    background: rgb(242, 242, 242)
+  .form-control
+    border-radius: 0
 
 .header__top
   +clr
-  padding: 15px 0
+  padding: 15px 0 13px
   margin-bottom: 8px
   border-bottom: 1px solid #eeeeee
 
@@ -129,6 +186,7 @@
 
 .calculate-cost
   display: flex
+  width: 451px
   flex-flow: row nowrap
   align-items: center
   margin-top: 8px
@@ -142,6 +200,9 @@
 .navigation
   background: #112232
   +clr
+
+.navigation__row
+  position: relative
 
 .navigation__menu
   float: left
@@ -158,6 +219,11 @@
   margin-left: 60px
   &:first-child
     margin-left: 0
+
+.menu__item_has-sub-menu
+  &:hover
+    .menu__sub
+      display: block
 
 .menu__link
   position: relative
@@ -179,18 +245,111 @@
     display: block
     +s(menu-arrow)
     transition: transform .3s
+  &:before
+    content: ''
+    position: absolute
+    bottom: -1px
+    left: 0
+    right: 20px
+    display: block
+    height: 0
+    background: #ff4e4e
+    transition: height .3s
   &:hover,
   &:active,
   &:focus,
   &_active
-    color: #ff4e4e
     text-decoration: none
-    &:after
-      transform: translate(5px, 0)
+    color: #fff
+    &:before
+      height: 2px
   &:active
     text-shadow: 0 0 1px darken(#ff4e4e, 10%)
-    &:after
-      transform: rotate(360deg) translate(0, 0)
+
+.menu__open-submenu
+  position: absolute
+  top: 11px
+  right: 0
+  display: none
+  width: 25px
+  height: 25px
+  cursor: pointer
+  transition: transform .3s
+  &.opened
+    transform: rotate(45deg)
+  &:after,
+  &:before
+    content: ''
+    display: block
+    background: #fff
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    margin: auto
+  &:before
+    width: 20px
+    height: 2px
+  &:after
+    height: 20px
+    width: 2px
+
+.menu__sub
+  position: absolute
+  top: 100%
+  left: 15px
+  right: 15px
+  display: none
+  width: calc(100% - 30px)
+  z-index: 50
+  padding: 35px 30px
+  background: #3598db
+  color: #fff
+
+.sub-menu
+  +clr
+
+.sub-menu__block
+  float: left
+  width: 33%
+
+.sub-menu__title
+  margin: 0 0 20px
+  font-size: 15px
+  text-transform: uppercase
+
+.sub-menu__nav
+
+.sub-menu__nav-item
+  margin: 0 0 10px
+  text-transform: uppercase
+  font-size: 12px
+  &:last-child
+    margin-bottom: 0
+
+.sub-menu__nav-link
+  position: relative
+  color: #fff
+  &:hover,
+  &:focus,
+  &.active,
+  &:active
+    color: #9dd7ff
+    text-decoration: none
+    &:before
+      opacity: 1
+      left: -15px
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: -20px
+    margin: auto
+    +s(submenu-arrow)
+    opacity: 0
+    transition: opacity .3s, left .3s
 
 .action-icon-group 
   margin: 5px
@@ -202,12 +361,93 @@
   transition: opacity .3s
   &:hover
     opacity: .7
+
+.m-navigation
+  display: none
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 1001
+  width: 100%
+  height: 100%
+  background: #3498db
+  overflow-y: scroll
+
+.m-menu
+
+.m-menu__item
+  border-top: 1px solid #5facdf
+  list-style: none
+
+.m-menu__item_has-sub-menu
+  position: relative
+  .m-menu__link
+    padding-right: 60px
+
+.m-menu__open-submenu
+  display: block
+  position: absolute
+  top: 0
+  right: 0
+  width: 58px
+  height: 58px
+  transition: transform .3s
+  &.opened
+    transform: rotate(90deg)
+  .icon-open-submenu
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    margin: auto
+
+.close-m-menu
+  position: relative
+  display: block
+  width: 60px
+  height: 60px
+  border: none
+  background: #3498db
+  .icon-close-menu
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    margin: auto
+
+.m-menu__link
+  display: block
+  padding: 20px 25px
+  line-height: 1.1
+  font-size: 17px
+  color: #fff
+  text-decoration: none
+  transition: background .3s
+  &:hover,
+  &:focus,
+  &:active,
+  &.active
+    background: #fff
+    color: #000
+    text-decoration: none
+
+.m-menu__sub
+  display: none
+  padding: 0 20px 10px 40px
+
+.sub-menu__title
+  color: #fff
+
+.m-sub-menu__block
+  margin-bottom: 20px
 //==============================================================================
 // button
 //==============================================================================
 
 .btn-calc
-  padding: 12px 18px
+  padding: 12px 27px
   background: #ff4e4e
   text-transform: uppercase
   font-family: "ClearSansBold"
@@ -222,7 +462,7 @@
 
 .btn-more
   padding: 12px 30px
-  border-radius: 0
+  border-radius: 2px
   background: #3498db
   text-transform: uppercase
   font-family: "ClearSansBold"
@@ -233,7 +473,45 @@
   &:active,
   &:focus
     color: #fff
+    text-decoration: none
     background: darken(#3498db, 20%)
+
+.btn-tab
+  @extend .btn-more
+  padding-top: 8px
+  padding-bottom: 8px
+  border-radius: 2px
+  color: #000
+  background: #f2f2f2
+  &:hover,
+  &:active,
+  &.active,
+  &:focus
+    color: #fff
+    text-decoration: none
+    background: #3498db
+
+.btn-tab_lg
+  padding: 12px 30px
+
+.btn-all-brand
+  padding: 15px 30px
+  border-radius: 2px
+  background: #3498db
+  text-transform: uppercase
+  font-family: "ClearSansBold"
+  font-size: 13px
+  color: #fff
+  transition: background .3s
+  &:hover,
+  &:active,
+  &:focus
+    color: #fff
+    background: darken(#3498db, 20%)
+
+.btn-lg
+  padding-top: 18px
+  padding-bottom: 18px
 //==============================================================================
 // main page
 //==============================================================================
@@ -259,6 +537,18 @@
     background-color: none
     text-indent: -9999px
     overflow: hidden
+  .slick-dots
+    bottom: 70px
+    max-width: 990px
+    margin: auto
+    padding-left: 112px
+    text-align: left
+    button
+      width: 7px
+      height: 7px
+      background: #c7c7c4
+    li.slick-active button
+      background: #ff4e4e
 
 .main-slider__arrows
   position: absolute
@@ -276,7 +566,7 @@
   top: 0
   left: 0
   right: 0
-  padding: 120px 0 0 90px
+  padding: 111px 0 0 104px
   color: #fff
 
 .main-slider__img
@@ -286,12 +576,1614 @@
   background-repeat: no-repeat
 
 .main-slider__title
-  margin-bottom: 20px
+  margin-bottom: 15px
   font-family: "ClearSansBold"
   font-size: 36px
+  line-height: 1.4
   text-transform: uppercase
 .main-slider__text
   max-width: 500px
-  margin-bottom: 35px
+  margin-bottom: 40px
   font-size: 16px
 
+
+.title-primary
+  position: relative
+  padding: 20px 10px 20px
+  margin: 80px auto 40px
+  font-size: 24px
+  font-weight: bold
+  text-align: center
+  color: #000
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    margin: auto
+    display: block
+    width: 35px
+    height: 2px
+    background: #ff4e4e
+
+.full-page-link
+  position: relative
+  text-align: center
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    display: block
+    width: 100%
+    height: 1px
+    margin: auto
+    background: #c1c1c1
+  a
+    position: relative
+    z-index: 5
+    display: inline-block
+    padding: 5px 25px
+    background: #fff
+    color: #000
+    font-size: 14px
+    transition: color .3s
+    .full-page-link__primary
+      display: inline-block
+    .full-page-link__active
+      display: none
+    &[aria-expanded="true"]
+      .full-page-link__primary
+        display: none
+      .full-page-link__active
+        display: inline-block
+      span.icon-all-arrow
+        transform: rotate(180deg)
+    span
+      margin-left: 15px
+      vertical-align: middle
+      transition: transform .3s
+    &:hover,
+    &:focus,
+    &:active
+      text-decoration: none
+      color: rgba(0, 0, 0, .7)
+
+.manufacturer-section 
+  margin-bottom: 100px
+
+.manufacturer
+  margin: 32px 0
+  text-align: center
+
+.manufacturer__item
+  display: inline-block
+  margin: 10px 1px
+  vertical-align: middle
+  a
+    display: block
+    filter: grayscale(100%)
+    transition: filter .3s
+    &:hover
+      filter: grayscale(0%)
+
+  img
+    vertical-align: middle
+
+.enginer-section
+  margin: 0 0 90px
+
+.tile-menu
+  +clr
+
+.tile-menu__item
+  float: left
+  width: 25%
+  padding: 5px
+  text-align: center
+  font-size: 15px
+  
+
+.tile-menu__link
+  display: block
+  height: 140px
+  padding: 30px 20px 15px
+  border-radius: 3px
+  color: #1e1e1e  
+  transition: color .3s
+  border: 1px solid #e3e3e3
+  background: #fff
+  transition: background .5s
+  &:hover
+    background: #ef4c4a
+    border: 1px solid #ef4c4a
+    text-decoration: none
+    color: #fff
+    .tile-menu__img-active
+      opacity: 1
+
+.tile-menu__icon
+  position: relative
+  height: 60px
+  width: 60px
+  margin: 0 auto 10px
+  
+.tile-menu__img,
+.tile-menu__img-active
+  +vcenter
+
+.tile-menu__img-active
+  opacity: 0
+  z-index: 5
+  transition: opacity .3s
+
+.tile-menu__title
+  font-size: 15px
+
+.popular-product
+  margin: 0 15px
+
+.popular-product__item
+  padding: 0 10px
+
+.product
+  display: block
+  font-size: 14px
+  text-align: center
+  &:hover 
+    a
+      color: #3498db
+    .product__img a
+      opacity: .7  
+
+.product__img
+  margin: 0 0 20px
+  a 
+    display: block
+    transition: opacity .3s
+    &:hover
+      opacity: .7
+  img
+    margin: 0 auto
+    max-width: 100%
+
+.product__name
+  font-size: 14px
+  a
+    color: #1e1e1e
+    text-decoration: none
+    transition: color .3s
+    &:hover
+      color: #3498db
+
+.brand-product-action
+  margin: 30px 0 0
+  text-align: center
+
+.brand-product-item
+  position: relative
+  max-width: 415px
+  margin: 0 auto 50px
+  &:hover
+    .brand-product-item__left
+      &:after
+        transform: translate(-100%, 0)
+        opacity: .32
+    .brand-product-item__right
+      &:after
+        transform: translate(100%, 0)
+        opacity: .32
+    .brand-product-item__refresh
+      transform: rotate(360deg)
+    .brand-product-item__link 
+      opacity: 1
+.brand-product-item__sale
+  z-index: 10
+  position: absolute
+  right: -25px
+  top: -25px
+  width: 50px
+  height: 50px
+  border-radius: 50%
+  background: #ef4c4a
+  line-height: 50px
+  font-size: 14px
+  text-align: center
+  color: #fff
+
+.brand-product-item__images
+  overflow: hidden
+  position: relative
+
+.brand-product-item__left,
+.brand-product-item__right
+  position: relative
+  overflow: hidden
+  float: left
+  width: 50%
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    display: block
+    width: 100%
+    height: 100%
+    background: #1b549b
+    opacity: .7
+    transition: transform .5s, opacity .5s
+
+
+.brand-product-item__inner
+  padding-top: 100%
+  position: relative
+  img
+    overflow: hidden
+    position: absolute
+    top: 0
+    left: 0
+    min-width: 100%
+    min-height: 100%
+
+.brand-product-item__text
+  margin: 20px 0 0
+  font-size: 15px
+  text-align: center
+
+.brand-product-item__refresh
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  display: block
+  margin: auto
+  width: 60px
+  height: 60px
+  border-radius: 50%
+  background: #fff
+  z-index: 5
+  transition: transform .5s
+  > span
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    margin: auto
+
+.brand-product-item__link 
+  position: absolute
+  z-index: 5
+  top: 50%
+  left: 40px
+  right: 40px
+  margin: -18px auto 0
+  border-radius: 25px
+  background: rgba(255, 255, 255, .7)
+  color: #000
+  font-size: 15px
+  font-weight: bold
+  opacity: 0
+  transition: opacity .5s
+
+
+.about
+  overflow: hidden
+  border: 8px solid #f5f5f5
+  
+
+.about__title
+  position: relative
+  margin-bottom: 25px
+  padding-left: 65px
+  font-size: 20px
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: -10px
+    display: block
+    +s(quote)
+  
+.about__text
+  margin: 0 0 25px
+  font-size: 14px
+  line-height: 1.8
+
+.about__photo
+  float: right
+  width: 242px
+  img
+    max-width: 100%
+    vertical-align: top
+
+.about__content
+  position: relative
+  z-index: 5
+  padding: 50px 0 10px 50px
+  margin-right: 200px
+  overflow: hidden
+
+.about__author
+  margin: 0 0 25px
+  font-size: 14px
+  font-style: italic
+  font-weight: bold
+
+.about__client
+  padding: 25px 0 0
+  border-top: 1px solid #f5f5f5
+  h4
+    margin-bottom: 20px
+    font-size: 16px
+    font-weight: bold
+
+  img
+    vertical-align: top
+    max-width: 100% 
+
+.dealer-list
+  margin: 40px 0
+  text-align: center
+  font-size: 0
+
+.testimonial-slider-wrap
+  margin: 0 -10px
+
+.dealer-list__item
+  display: inline-block
+  vertical-align: middle
+  width: 20%
+  padding: 5px 20px
+  text-align: center
+
+.testimonial-slider__item
+  text-align: center
+  padding: 0 10px
+
+.testimonial-slider__link
+  display: inline-block
+  margin: 0 15px
+  border: 11px solid #f4f4f5
+  border-top-color: #ececec
+  border-bottom-color: #ececec
+  img
+    vertical-align: top
+    width: 100%
+
+.testimonial-slider-control
+  margin: 78px 0
+  text-align: center
+
+.testimonial-slider-dots
+  position: relative
+  display: inline-block
+  vertical-align: middle
+  max-width: 500px
+  .slick-dots
+    position: static
+    counter-reset: testimonialDots
+    li
+      display: inline-block
+      padding: 0
+      margin: 5px
+      &.slick-active,
+      &:hover
+        button
+          background: #ff4e4e
+          color: #fff
+      button
+        height: auto
+        width: auto
+        padding: 0 2px
+        min-width: 34px
+        border-radius: 0
+        background: #fff
+        text-align: center
+        font: 400 14px 'ClearSansRegular'
+        line-height: 34px
+        color: #222222
+        box-shadow: none
+        transition: color .3s, background .3s
+
+        
+
+.slick-testimonial-btn
+  display: inline-block
+  background: none
+  padding: 0
+  vertical-align: middle
+  margin: 0 20px
+  transition: transform .3s
+  &.slick-disabled
+    opacity: .5
+    cursor: not-allowed
+    &:hover
+      transform: scale(1)
+  &:hover
+    transform: scale(1.2)
+  span
+    vertical-align: middle
+
+/**
+ * Footer
+ */
+
+.footer
+  margin-top: 20px
+
+.footer__top
+  padding: 37px 0 20px
+  background: #f3f3f3
+
+.foot-nav
+  float: left
+  width: 33.33333%
+  padding-right: 70px
+
+.foot-nav__title
+  margin-bottom: 20px
+  font-size: 14px
+  color: #000
+  font-weight: bold
+
+.foot-menu
+
+.foot-menu__item
+  margin-bottom: 8px
+
+.foot-menu__link
+  position: relative
+  text-decoration: none
+  color: #112232
+  font-size: 13px
+  &:after
+    content: ''
+    position: absolute
+    bottom: -3px
+    left: 0
+    right: 0
+    display: block
+    width: 0
+    height: 1px
+    margin: auto
+    transition: width .3s
+    background: #112232
+  &:hover,
+  &:active,
+  &.active,
+  &:focus,
+  &_active
+    text-decoration: none
+    color: #112232
+    &:after
+      width: 100%
+
+.footer__link
+  margin: 0
+  a
+    color: #1e1e1e
+    font-weight: bold
+    font-size: 12px
+    text-decoration: underline
+    &:hover
+      color: #1e1e1e
+      text-decoration: none
+
+.footer__bottom
+  padding: 15px
+  font-size: 12px
+  color: #858585
+
+.footer__copyright
+  float: right
+  text-align: right
+  font-size: 11px
+
+.footer__company
+  float: left
+  text-align: left
+
+.footer__contact
+  padding-left: 0
+  .info-group
+    text-align: left
+  
+  .info-group__icon
+    position: absolute
+    left: 0
+    top: 5px
+    vertical-align: middle
+
+  .info-group__item
+    position: relative
+    margin: 0 0 15px
+    padding-left: 25px
+    font-size: 14px
+
+  .info-group__item_bold
+    font-size: 15px
+
+.container_breadcrumbs
+  margin-top: 30px
+  margin-bottom: 40px
+
+.breadcrumb
+  +clr
+
+.breadcrumb__item
+  float: left
+  color: #3498db
+  text-transform: uppercase
+  font-size: 11px
+  &:after
+    content: '/'
+    position: relative
+    top: -1px
+    display: inline-block
+    margin: 0 3px
+    color: #888888
+  &:last-child
+    &:after
+      display: none
+
+.breadcrumb__link
+  color: #888888
+
+.tab-content 
+  > .tab-pane 
+    display: none
+  
+  > .active 
+    display: block
+  
+.tab  
+  margin-bottom: 60px
+
+.tab__border
+  .navs
+    margin-bottom: 0
+
+  .navs__item
+    margin-bottom: 0
+
+  .tab-content
+    padding: 35px
+    border: 1px solid #e4e4e4
+    table:last-child
+      margin-bottom: 0
+
+.navs
+  +clr
+  margin-bottom: 25px
+
+.navs_category
+  margin: 27px 0 29px
+
+
+.navs__item
+  float: left
+  margin-right: 12px
+  margin-bottom: 10px
+  &.active
+    .navs__link
+      color: #fff
+      text-decoration: none
+      background: #3498db
+  &:last-child
+    margin-right: 0
+
+.navs__link
+  display: block
+  min-width: 140px
+  padding-right: 10px
+  padding-left: 10px
+  text-align: center
+  font-size: 11px
+  &.btn-tab_lg
+    padding-left: 20px
+    padding-right: 20px
+
+.table-striped
+  font-size: 13px
+  td
+    border: none!important
+  >tbody 
+    > tr:nth-of-type(odd)
+      background: #f2f2f2
+.main_inner-page
+  padding: 0 0 60px
+  font-size: 14px
+  line-height: 1.6
+  h1
+    margin: 0 0 25px
+    font-weight: 700
+    font-size: 24px
+
+  h2:not(.title-primary)
+    margin: 15px 0 30px
+    font-weight: 700
+    font-size: 20px
+  
+  h3
+    margin-bottom: 25px
+    font-weight: 700
+    font-size: 14px
+
+  p
+    margin-bottom: 10px
+
+.our-client
+  td
+    padding: 27px 10px
+    vertical-align: middle
+    text-align: center
+    border: 1px solid #ececec
+    img
+      vertical-align: middle
+      max-width: 100%
+      height: auto
+
+.show-more-client 
+  margin: 40px 0 70px
+  font-size: 12px
+  a
+    &:hover
+      text-decoration: none
+
+.modal-content
+  border-radius: 0
+  box-shadow: none !important
+
+.form-inline
+  margin: 15px 0 35px
+  padding: 30px 20px
+  border: 1px solid #e4e4e4
+
+.form-control
+  padding-top: 12px
+  padding-bottom: 12px
+  box-shadow: none
+
+.form-group
+  a, .a
+    display: inline-block
+    margin-bottom: 10px
+    font-size: 13px
+    color: #3498db
+    text-decoration: none
+    &:hover
+      text-decoration: none
+      color: #3498bd
+    span
+      vertical-align: middle
+      margin-right: 8px
+
+.input-upload
+  position: relative
+  overflow: hidden
+  input[type="file"]
+    cursor: pointer
+    z-index: 555
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    opacity: 0
+.a
+  padding-bottom: 2px
+a, .a
+  cursor: pointer
+  display: inline-block
+  .link-underline
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      bottom: -2px
+      left: 0
+      display: block
+      width: 100%
+      border-bottom: 1px dashed #3498db
+  &:hover
+    .link-underline:after
+      display: none
+  .link-dotted
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      bottom: -2px
+      left: 0
+      display: block
+      width: 100%
+      border-bottom: 1px dotted #3498db
+  &:hover
+    .link-dotted:after
+      display: none
+.close
+  position: absolute
+  top: -4px
+  right: -20px
+  font-size: 25px
+  line-height: 1
+  color: #fff
+  opacity: 1
+  &:hover
+    color: #fff
+    opacity: .7
+
+.modal-title
+  font-size: 20px
+  font-weight: 700
+  line-height: 1.3
+  + p 
+    font-size: 14px 
+    margin-top: 10px
+
+.modal-header
+  border-bottom: 1px
+  padding-bottom: 0
+
+.form-group
+  margin-bottom: 10px
+
+.category-good
+  margin: 0 0 25px
+  padding: 15px
+  font-size: 14px
+  &:hover
+    box-shadow: 0 0 1px 1px #e4e4e4
+    .category-good__preview-hover
+      opacity: 1
+
+.category-goods-action
+  text-align: center
+  margin: 19px 0 69px
+
+.category-good__preview
+  position: relative
+  overflow: hidden
+  height: 125px
+  margin-bottom: 12px
+  img
+    min-height: 125px
+    min-width: 100%
+    width: auto
+    vertical-align: top
+
+.category-good__preview-link
+  display: block
+  &:hover
+    color: #fff
+  
+.category-good__preview-hover
+  position: absolute
+  z-index: 2
+  top: 0
+  left: 0
+  display: flex
+  flex-flow: column nowrap
+  justify-content: center
+  width: 100%
+  height: 100%
+  padding: 10px 25px
+  background: rgba(52, 152, 219, .8)
+  text-align: center
+  color: #fff
+  font-size: 11px
+  font-weight: 700
+  text-transform: uppercase
+  opacity: 0
+  transition: opacity .3s
+  .icon
+    margin-bottom: 12px
+
+.category-good__info
+  +clr
+  padding-bottom: 12px
+  margin-bottom: 12px
+  border-bottom: 1px solid #e4e4e4
+
+.category-good__info-left
+  float: left
+
+.category-good__info-right
+  float: right
+
+.category-good__title
+  margin-bottom: 12px
+  font-size: 15px
+  font-weight: 700
+  a
+    color: #000
+    &:hover
+      text-decoration: none
+      color: #000
+      opacity: .8
+
+.category-good__text
+  margin-bottom: 12px
+  font-size: 13px
+
+.category-good__price
+  color: #ff4e4e  
+  font-weight: bold
+
+.label-mark
+  position: relative
+  padding-left: 14px
+  font-size: 12px
+  color: #000
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    margin: auto
+    width: 6px
+    height: 6px
+    border-radius: 50%
+    background: #6bc05f
+
+.label-mark_production:before
+  background: #3498db
+
+.video-gallery
+  margin: 50px 0 13px
+
+.video-gallery-row
+  position: relative
+  margin: 0 0 0 -12px
+  padding-right: 80px
+  .slick-testimonial-next
+    position: absolute
+    right: 0
+    top: 0
+    bottom: 0
+    height: 22px
+    margin: auto
+
+.video-gallery__item
+  padding: 0 12px
+
+.video-gallery__preview
+  display: block
+  position: relative
+  overflow: hidden
+  margin-bottom: 15px
+  img 
+    width: 100%
+  &:after
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    margin: -21px 0 0 -21px
+    +s(youtube)
+    transition: opacity .3s
+  &:hover:after
+    opacity: .7
+
+.videp-gallery__title
+  margin-bottom: 10px
+  font-size: 14px
+  font-weight: bold
+  line-height: 1.3
+  a 
+    color: #222222
+    &:hover
+      color: #222222
+
+.video-gallery__action
+
+.video-galley__btn
+  background: none
+  border: none
+  font-size: 11px
+  color: #6d6e70
+  transition: opacity .3s
+  &:hover
+    opacity: .7
+    color: #6d6e70
+    background: none
+    border: none
+  &:not(:last-child)
+    margin-right: 15px
+
+.shipments__item
+  padding: 0 10px 10px
+
+.shipments__preview
+  position: relative
+  display: block
+  margin-bottom: 10px
+  img 
+    width: 100%
+  &:hover
+    .shipments__preview-hover
+      opacity: 1
+
+.shipments-slider
+  .testimonial-slider-control
+    margin: 54px 0 22px
+
+.shipments__title
+  padding: 0 10px
+  font-size: 13px
+  text-align: center
+  a
+    color: #222
+
+.shipments__preview-hover
+  position: absolute
+  z-index: 2
+  top: 0
+  left: 0
+  display: flex
+  flex-flow: column nowrap
+  justify-content: center
+  width: 100%
+  height: 100%
+  padding: 10px 25px
+  background: rgba(52, 152, 219, .8)
+  text-align: center
+  color: #fff
+  font-size: 11px
+  font-weight: 700
+  text-transform: uppercase
+  opacity: 0
+  transition: opacity .3s
+  .icon
+    margin-bottom: 6px
+
+.additional-good__item
+  position: relative
+  padding: 0 15px
+  &:first-child
+    padding-left: 0
+  &:after
+    content: ''
+    position: absolute
+    top: 15px
+    bottom: 15px
+    right: 0
+    display: block
+    width: 1px
+    height: 60px
+    background: #e4e4e4
+  &:last-child:after
+    display: none
+
+.additional-good__link
+  display: block
+  padding: 15px 17px
+  background: #fff
+  transition: background .3s
+  +clr
+  img
+    vertical-align: top
+  &:hover
+    text-decoration: none
+    background: #f9f9f9
+    box-shadow: 0 0 0 1px #e4e4e4
+
+.additional-good__preview
+  display: block
+  width: 90px
+  float: left
+
+.additional-good__content
+  display: block
+  margin-left: 100px
+
+.additional-good__title
+  display: block
+  color: #000
+  font-size: 13px
+
+.additional-good__price
+  display: block
+  color: #858585
+  font-size: 12px
+
+.card__main-info
+  > *
+    margin-bottom: 45px
+
+.card__main-info.card__main-info_objects
+  h2
+    margin-top: 0
+  
+  dl
+    margin: 25px 0
+
+  dt
+    margin-bottom: 10px
+    font-weight: bold
+
+  dd
+    margin-bottom: 15px
+
+
+.card-gallery
+  margin-bottom: 10px
+  img
+    width: 100%
+  .slick-arrow
+    margin-top: -18px
+    overflow: hidden
+    width: 36px
+    height: 36px
+    background: rgba(255, 255, 255, 0.7)
+    text-indent: -9999px
+    border-radius: 2px
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      bottom: 0
+      right: 0
+      left: 0
+      margin: auto
+
+  .slick-next 
+    right: 8px
+    &:after
+      +s(t-slick-rightt)
+  .slick-prev
+    left: 8px
+    &:after
+      +s(t-slick-left)
+
+.card-gallery-pag-out
+  margin: -5px -5px 40px
+
+.card-gallery-pag_actived
+  .slick-current img
+    box-shadow: 0 0 0 3px #ff4e4e
+
+.card-gallery-pag__item
+  padding: 5px
+  img
+    vertical-align: top
+
+.card__title
+  margin-bottom: 10px
+  font-size: 22px
+
+.card__ty
+  margin-bottom: 20px
+  color: #5d5b5b
+
+.card__info
+  margin-bottom: 25px
+  font-size: 12px
+  +clr
+
+.card__info-left
+  float: left
+  + .card__info-left
+    margin-left: 20px
+
+.card__panel
+  padding: 20px
+  border: 1px solid #e4e4e4
+  + .card__panel
+    margin-top: 10px
+  hr
+    margin: 20px -19px
+    border-color: #e4e4e4
+
+.card__count
+  float: left
+  label
+    font-weight: normal
+  .form-control
+    display: inline-block
+    width: 60px
+    height: 36px
+    padding-top: 8px
+    padding-bottom: 8px
+    vertical-align: middle
+    text-align: center
+
+.card__price
+  float: left
+  margin-left: 25px
+  font-weight: 700
+  font-size: 18px
+  line-height: 34px
+  color: #ff4e4e
+  span
+    display: inline-block
+    vertical-align: middle
+    font-size: 14px
+    color: #000
+
+.card__add-to-card
+  float: right
+  font-size: 12px
+  
+  a
+    position: relative
+    display: block
+    padding-left: 23px
+    color: #000
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      top: 3px
+      left: 0
+      +s(red-plus)
+
+.card-panel__title
+  margin-bottom: 16px
+  font-weight: 700
+  font-size: 14px
+  text-transform: uppercase
+
+.radio-btn
+  position: relative
+  display: inline-block
+  input
+    opacity: 0
+    visibility: hidden
+    position: absolute
+    clip: rect(0,0,0,0)
+    &:checked + .radio-btn__label
+      background: #3498db
+      color: #fff
+
+.radio-btn__label
+  display: block
+  min-width: 85px
+  padding: 10px
+  margin: 0 8px 8px 0
+  border-radius: 2px
+  background: #f2f2f2
+  font-weight: normal
+  font-size: 13px
+  text-align: center
+  cursor: pointer
+  transition: background .3s
+
+@media screen and (max-width: 991px)
+  .navs_category
+    margin: 20px 0 5px
+    text-align: justify
+    &:after
+      content: ''
+      display: inline-block
+      width: 100%
+
+  .navs__item
+    float: none
+    display: inline-block
+    margin-bottom: 8px
+    margin-right: 0
+
+  .btn-tab
+    padding: 12px 10px
+  
+
+  .category-good__preview
+    height: auto
+
+  .testimonial-slider__link
+    width: 45%
+    margin: 10px 15px
+
+  .navigation__action
+    float: none
+    .action-icon-group
+      float: right
+
+  .fill-grey
+    padding-bottom: 40px
+
+  .header__top
+    .header__left
+      float: none
+  
+  .title-primary
+    margin-top: 30px
+  
+  .header__info-block
+    float: none
+    margin: 10px 0 5px
+    text-align: center
+    .info-group__item
+      margin: 0 15px
+  
+  .dealer-list
+    margin: 30px auto
+
+  .dealer-list__item
+    width: 24%
+    padding: 0 5px
+    margin: 10px
+    min-width: 200px
+  .foot-nav
+    padding-right: 5px
+
+  .testimonial-slider-control
+    margin: 40px 0
+
+  .enginer-section
+    margin-bottom: 50px
+
+  .manufacturer-section
+    margin-bottom: 50px
+
+  .additional-good__item
+    margin: 10px 0
+    &:nth-child(2n)
+      &:after
+        display: none
+    &:first-child
+      padding-left: 15px
+  
+  .main_inner-page
+    padding: 20px 0 20px
+    h1
+      font-size: 23px
+      margin-bottom: 15px
+
+  .form-inline
+
+  .form-header
+    margin-bottom: 15px
+
+  .form-title
+    margin-bottom: 5px
+    font-size: 15px
+    font-weight: 700
+
+@media screen and (max-width: 767px)
+  .video-gallery
+    margin-top: 20px
+
+  .dealer-list__item
+    min-width: 0
+    width: 48%
+    margin: 0
+    padding: 10px
+
+  .footer__menu
+    overflow: hidden
+
+  .footer__contact
+    padding: 15px
+
+    .info-group__item
+      padding-left: 0
+      margin: 0 15px 15px 0
+
+    .info-group__icon
+      position: static
+  
+  .footer__copyright
+    float: none
+    text-align: center
+    margin-bottom: 15px
+
+  .footer__company
+    float: none
+    text-align: center
+  
+  .about-section
+    margin-top: 50px
+
+  .about__content
+    margin: 0
+    padding: 20px
+  
+  .about__author
+    +clr
+    position: relative
+    margin-bottom: 0
+    vertical-align: top
+
+  .about__photo
+    margin-right: -20px
+    width: 120px
+  
+  .about__title
+    margin-bottom: 20px
+    padding-top: 17px
+    padding-left: 50px
+    line-height: 1.4
+    &:before
+      left: -12px
+      top: 0
+  
+  .about__text
+    line-height: 1.9
+
+  .about__author-text
+    position: absolute
+    top: 50% 
+    left: 0
+    width: 140px
+    display: block
+    transform: translate(0, -50%)
+  
+  .enginer-section
+    margin-bottom: 30px
+
+  .tile-menu
+    text-align: center
+
+  .tile-menu__item
+    display: inline-block
+    vertical-align: top
+    float: none
+    padding: 6px
+    width: 240px
+
+  .tile-menu__link
+    padding-top: 20px
+
+  .header__bottom
+    .header__left
+      float: none
+
+  .brand
+    justify-content: center
+  
+  .calculate-cost
+    float: none
+    margin: 15px auto
+
+  .footer__contact 
+    .info-group__item
+      display: block
+      margin: 0 0 10px
+
+  .footer__link
+    text-align: center
+
+  .foot-nav
+    float: none
+    width: auto
+    text-align: center
+    margin: 0 0 25px
+  
+  .maim-slider__content
+    padding: 38px 15px 0
+  
+  .main-slider__arrows
+    display: none
+
+  .main-slider__title
+    margin-bottom: 20px
+    font-size: 32px
+    line-height: 1.2
+    text-align: center
+
+  .main-slider__text
+    margin-bottom: 20px
+    line-height: 1.6
+    text-align: center
+
+  .main-slider__action
+    text-align: center
+    .btn
+      font-size: 15px
+      padding: 15px 40px
+  
+  .title-primary
+    margin-top: 30px
+    margin-bottom: 10px
+  
+  .manufacturer
+    margin: 10px 0
+
+  .manufacturer__item
+    margin: 7px 1px
+    max-width: 48%
+
+  .full-page-link a
+    font-size: 14px
+
+  .manufacturer-section
+    margin-bottom: 55px
+
+  .info-group_white
+    display: block
+    padding: 18px 24px
+    .info-group__item
+      position: relative
+      display: block
+      margin: 0 0 10px
+      padding-left: 32px
+      text-align: left
+      font-size: 16px
+    .info-group__icon
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      margin: auto
+  
+  .our-client,
+  .our-client tbody
+    display: block
+    width: 100%
+    tr
+      display: block
+      width: 100%
+    td
+      display: block
+      width: 100%
+      margin-bottom: -1px
+
+  .tab__border
+    .navs__item 
+      margin-bottom: 10px
+
+    .tab-content
+      padding: 18px
+  
+  .brand-product-item__refresh
+    width: 40px
+    height: 40px
+    span
+      height: 20px
+      width: 20px
+      background-size: 100px 85px
+      background-position: -57px 0
+  
+  .brand-product
+    margin-top: 25px
+
+  .brand-product-action
+    margin-top: 0
+
+  .brand-product-item__link
+    left: 30px
+    right: 10px
+
+  .brand-product-item__left .brand-product-item__link
+    right: 30px
+    left: 10px
+
+  .brand-product-item__sale
+    right: 0
+
+  .brand-product-item__text
+    margin-top: 10px
+  
+  .brand-product-item
+    margin-bottom: 40px
+  
+  .footer__top
+    padding: 10px 34px 14px
+
+  .testimonial-slider__link
+    width: 180px
+
+  .testimonial-slider-control
+    margin: 30px 0
+  
+  .additional-good-out
+    padding: 20px 25px
+    border: 1px solid #e4e4e4
+    h3
+      margin-bottom: 15px
+    .show-more-client 
+      margin-top: 20px
+      margin-bottom: 0
+  
+  .additional-good__item:after
+    display: none
+
+  .additional-good__link
+    padding: 0
+    &:hover
+      box-shadow: none
+      background: #fff
+
+  .footer__copyright
+    font-size: 13px
+    margin-bottom: 25px
+    line-height: 1.4
+
+  .footer__company
+    font-size: 12px
+
+  .footer__bottom
+    padding: 25px
+  .shipments-slider .testimonial-slider-control
+    margin-top: 20px
+  .shipments__preview 
+    text-align: center
+    img
+      max-width: 100%
+      height: auto
+      width: auto
+      margin: 0 auto
+  
+  .slick-testimonial-btn
+    margin: 0 5px
+  
+  .card__main-info > *
+    margin-bottom: 25px
+
+  .card__title
+    margin-bottom: 10px
+    font-size: 22px
+
+  .card__panel
+    padding: 20px 0 10px
+    margin: 0
+    border: none
+    border-top: 1px solid rgb(228, 228, 228)
+    hr
+      margin: 20px 0
+  
+  .card__count
+    label
+      font-size: 15px
+      margin-right: 10px
+
+  .card__price
+    float: right
+    font-size: 20px
+
+  .card__add-to-card
+    margin: 10px 0
+    width: 100%
+    font-size: 15px
+    br
+      display: none
+  
+  .card__add-info
+    .navs
+      text-align: center
+    .navs__item
+      min-width: 80%
+      font-size: 14px
+    .navs__link 
+      padding: 16px 10px
+      font-size: 14px
+  .category-good
+    padding: 15px 30px 25px
+    margin: 0 15px 15px
+    border-bottom: 1px solid #e4e4e4
+    &:hover
+      box-shadow: none
+@media screen and (max-width: 600px)  
+  .calculate-cost
+    position: relative
+    width: auto
+    display: block
+    padding-right: 30px
+
+  .calculate-cost__icon
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    height: 12px
+    width: 31px
+    margin: auto
+    transform: rotate(90deg)
+
+  .calculate-cost__text
+    display: block
+    margin-bottom: 20px
+
+  .btn-all-brand
+    padding: 15px
+  
+  .testimonial-slider-dots
+    max-width: 222px

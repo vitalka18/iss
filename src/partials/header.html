@@ -1,11 +1,11 @@
-<header class="header container">
+<header class="header container hidden-sm hidden-xs">
     
   <div class="header__top">
     
     <div class="header__left">
       
       <ul class="nav-link">
-        <li class="nav-link__item"><a class="nav-link__link" href="#">О компании</a></li> 
+        <li class="nav-link__item"><a class="nav-link__link" href="about.html">О компании</a></li> 
         <li class="nav-link__item"><a class="nav-link__link" href="#"> Объекты</a></li> 
         <li class="nav-link__item"><a class="nav-link__link" href="#">Доставка и оплата</a></li> 
         <li class="nav-link__item"><a class="nav-link__link" href="#">Контакты</a></li> 
@@ -35,7 +35,7 @@
   <div class="header__bottom">
 
     <div class="header__left">
-      <a href="#" class="brand">
+      <a href="/" class="brand">
         <div class="brand__img"><img src="./img/logo.png" alt="ИНЖЕНЕРНЫЕ И СТРОИТЕЛЬНЫЕ СИСТЕМЫ"></div>
         <div class="brand__text">ИНЖЕНЕРНЫЕ <br> И СТРОИТЕЛЬНЫЕ СИСТЕМЫ</div>
       </a>  
@@ -44,28 +44,237 @@
     <div class="header__right calculate-cost">
       <div class="calculate-cost__text"><b>Удешевим смету</b> на инженерную <br>продукцию на 15-20%</div>
       <div class="calculate-cost__icon"><span class="icon-red-arrow"></span></div>
-      <button class="btn btn-calc">рассчитать заявку</button>
+      <button type="button" class="btn btn-calc" data-toggle="modal" data-target="#calcModal">рассчитать заявку</button>
     </div>
   </div>
 </header>
 
-<nav class="navigation">
-  <div class="container">
-    <div class="row">
-      <div class="navigation__menu">
-        <ul class="menu">
-          <li class="menu__item"><a class="menu__link" href="#">каталог продукции</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">Сферы применения</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">производители</a></li>
-        </ul>
-      </div>
 
+<header class="header-mobile visible-xs visible-sm">
+  <div class="header-mobile__container container">
+    <div class="header-mobile__btn">
+      <button type="button" class="navbar-toggle js-open-menu">
+        <span class="icon-bar__group">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </span>
+        
+        <span class="navbar-toggle__text">
+          Меню
+        </span>
+      </button>
+    </div>
+    
+    <div class="header-mobile__action header__right">
+      <div class="action-icon-group">
+        <a class="action-icon-group__item" href="#" title="Корзина"><span class="icon-m-tel"></span></a>
+        <a class="action-icon-group__item" href="#" title="Поиск"><span class="icon-m-search-head"></span></a>
+      </div>
+    </div>
+
+    <a href="#" class="header-mobile__logo">
+      <img src="img/m-logo.png" alt="Главная">
+    </a>
+  </div>
+</header>
+
+<div class="visible-xs visible-sm">
+  <form action="#" id="headerSearch" class="head-search">
+    <div class="input-group"> 
+      <input class="form-control" placeholder="Поиск по сайту"> 
+      <span class="input-group-btn"> 
+        <button class="btn btn-default" type="button">
+          <span class="icon-m-search-btn"></span>
+        </button> 
+      </span> 
+    </div>
+  </form>
+</div>
+
+<nav class="m-navigation">
+  <div class="m-navigation__controll">
+    <button class="close-m-menu js-close-m-menu"><span class="icon-close-menu"></span></button>
+  </div>
+
+  <div class="m-navigation__menu">
+    <ul class="m-menu">
+          <li class="m-menu__item m-menu__item_has-sub-menu">
+            <a class="m-menu__link" href="category.html">Каталог продукции</a>
+            <span class="m-menu__open-submenu"><span class="icon-open-submenu"></span></span>
+            <div class="m-menu__sub">
+              <div class="m-sub-menu">
+
+                <div class="m-sub-menu__block">
+                  <h3 class="sub-menu__title">ТРУБЫ</h3>
+
+                  <ul class="sub-menu__nav">
+                    <li class="sub-menu__nav-item">
+                      <a href="#" class="sub-menu__nav-link">ТРУБЫ ПНД (ПЭ)</a>
+                    </li>
+
+                    <li class="sub-menu__nav-item">
+                      <a href="#" class="sub-menu__nav-link">ТРУБЫ НПВХ</a>
+                    </li>
+
+                    <li class="sub-menu__nav-item">
+                      <span class="sub-menu__nav-link active">ТРУБЫ ГОРФРИРОВАННЫЕ</span>
+                    </li>
+
+                    <li class="sub-menu__nav-item">
+                      <a href="#" class="sub-menu__nav-link">ТРУБЫ ППР</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="m-sub-menu__block">
+                  <h3 class="sub-menu__title">ОБОРУДОВАНИЕ</h3>
+
+                  <ul class="sub-menu__nav">
+                    <li class="sub-menu__nav-item">
+                      <a href="#" class="sub-menu__nav-link">ТРУБЫ ПНД (ПЭ)</a>
+                    </li>
+
+                    <li class="sub-menu__nav-item">
+                      <a href="#" class="sub-menu__nav-link">ТРУБЫ НПВХ</a>
+                    </li>
+
+                    <li class="sub-menu__nav-item">
+                      <a href="#" class="sub-menu__nav-link">ТРУБЫ ГОРФРИРОВАННЫЕ</a>
+                    </li>
+
+                    <li class="sub-menu__nav-item">
+                      <a href="#" class="sub-menu__nav-link">ТРУБЫ ППР</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="m-sub-menu__block">
+                  <h3 class="sub-menu__title">ОЧИСТНЫЕ СООРУЖЕНИЯ</h3>
+
+                  <ul class="sub-menu__nav">
+                    <li class="sub-menu__nav-item">
+                      <a href="#" class="sub-menu__nav-link">ТРУБЫ ПНД (ПЭ)</a>
+                    </li>
+
+                    <li class="sub-menu__nav-item">
+                      <a href="#" class="sub-menu__nav-link">ТРУБЫ НПВХ</a>
+                    </li>
+
+                    <li class="sub-menu__nav-item">
+                      <a href="#" class="sub-menu__nav-link">ТРУБЫ ГОРФРИРОВАННЫЕ</a>
+                    </li>
+
+                    <li class="sub-menu__nav-item">
+                      <a href="#" class="sub-menu__nav-link">ТРУБЫ ППР</a>
+                    </li>
+                  </ul>
+                </div>
+              
+              </div>
+            </div>
+          </li>
+          <li class="m-menu__item"><a class="m-menu__link" href="#">Сферы применения</a></li>
+          <li class="m-menu__item"><a class="m-menu__link" href="#">Производители</a></li>
+          <li class="m-menu__item"><a class="m-menu__link" href="#">О компании</a></li>
+          <li class="m-menu__item"><a class="m-menu__link" href="#">Объекты</a></li>
+          <li class="m-menu__item"><a class="m-menu__link" href="#">Доставка и оплата</a></li>
+          <li class="m-menu__item"><a class="m-menu__link" href="#">Контакты</a></li>
+        </ul>
+  </div>
+</nav>
+
+<nav class="navigation hidden-xs hidden-sm">
+  <div class="container">
+    <div class="row navigation__row ">
       <div class="navigation__action">
-        <div class="action-icon-group">
+        <div class="action-icon-group hidden-xs hidden-sm">
           <a class="action-icon-group__item" href="#" title="Поиск"><span class="icon-white-search"></span></a>
           <a class="action-icon-group__item" href="#" title="Корзина"><span class="icon-white-cart"></span></a>
           <a class="action-icon-group__item" href="#" title="Контакты"><span class="icon-white-people"></span></a>
         </div>
+      </div>
+
+      <div class="navigation__menu">
+        <ul class="menu">
+          <li class="menu__item menu__item_has-sub-menu">
+            <a class="menu__link" href="category.html">каталог продукции</a>
+            <span class="menu__open-submenu"></span>
+            <div class="menu__sub">
+              <div class="sub-menu">
+
+                <div class="sub-menu__block">
+                  <h3 class="sub-menu__title">ТРУБЫ</h3>
+
+                  <ul class="sub-menu__nav">
+                    <li class="sub-menu__nav-item">
+                      <a href="#" class="sub-menu__nav-link">ТРУБЫ ПНД (ПЭ)</a>
+                    </li>
+
+                    <li class="sub-menu__nav-item">
+                      <a href="#" class="sub-menu__nav-link">ТРУБЫ НПВХ</a>
+                    </li>
+
+                    <li class="sub-menu__nav-item">
+                      <span class="sub-menu__nav-link active">ТРУБЫ ГОРФРИРОВАННЫЕ</span>
+                    </li>
+
+                    <li class="sub-menu__nav-item">
+                      <a href="#" class="sub-menu__nav-link">ТРУБЫ ППР</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="sub-menu__block">
+                  <h3 class="sub-menu__title">ОБОРУДОВАНИЕ</h3>
+
+                  <ul class="sub-menu__nav">
+                    <li class="sub-menu__nav-item">
+                      <a href="#" class="sub-menu__nav-link">ТРУБЫ ПНД (ПЭ)</a>
+                    </li>
+
+                    <li class="sub-menu__nav-item">
+                      <a href="#" class="sub-menu__nav-link">ТРУБЫ НПВХ</a>
+                    </li>
+
+                    <li class="sub-menu__nav-item">
+                      <a href="#" class="sub-menu__nav-link">ТРУБЫ ГОРФРИРОВАННЫЕ</a>
+                    </li>
+
+                    <li class="sub-menu__nav-item">
+                      <a href="#" class="sub-menu__nav-link">ТРУБЫ ППР</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="sub-menu__block">
+                  <h3 class="sub-menu__title">ОЧИСТНЫЕ СООРУЖЕНИЯ</h3>
+
+                  <ul class="sub-menu__nav">
+                    <li class="sub-menu__nav-item">
+                      <a href="#" class="sub-menu__nav-link">ТРУБЫ ПНД (ПЭ)</a>
+                    </li>
+
+                    <li class="sub-menu__nav-item">
+                      <a href="#" class="sub-menu__nav-link">ТРУБЫ НПВХ</a>
+                    </li>
+
+                    <li class="sub-menu__nav-item">
+                      <a href="#" class="sub-menu__nav-link">ТРУБЫ ГОРФРИРОВАННЫЕ</a>
+                    </li>
+
+                    <li class="sub-menu__nav-item">
+                      <a href="#" class="sub-menu__nav-link">ТРУБЫ ППР</a>
+                    </li>
+                  </ul>
+                </div>
+              
+              </div>
+            </div>
+          </li>
+          <li class="menu__item"><a class="menu__link" href="#">Сферы применения</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">производители</a></li>
+        </ul>
       </div>
     </div>
   </div>

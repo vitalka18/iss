@@ -99,8 +99,67 @@ body
   clip: rect(0,0,0,0)
   border: 0
 
+img
+  max-width: 100%
+  height: auto
+
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration 
   display: none
+
+a
+  color: #3498db
+  &:hover
+    color: #3498db
+
+textarea
+  resize: vertical
+
+.mfp-no-margins img.mfp-img 
+  padding: 0
+
+.mfp-no-margins .mfp-figure:after 
+  top: 0
+  bottom: 0
+
+.mfp-no-margins .mfp-container 
+  padding: 0
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg 
+  opacity: 0
+  transition: all 0.3s ease-out
+
+
+.mfp-with-zoom.mfp-ready .mfp-container 
+  opacity: 1
+
+.mfp-with-zoom.mfp-ready.mfp-bg 
+  opacity: 0.8
+
+
+.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing.mfp-bg 
+  opacity: 0
+
+.mfp-fade.mfp-bg 
+  opacity: 0
+  transition: all 0.15s ease-out
+
+.mfp-fade.mfp-bg.mfp-ready 
+  opacity: 0.8
+
+.mfp-fade.mfp-bg.mfp-removing 
+  opacity: 0
+
+.mfp-fade.mfp-wrap .mfp-content 
+  opacity: 0
+  transition: all 0.15s ease-out
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content 
+  opacity: 1
+
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content 
+  opacity: 0

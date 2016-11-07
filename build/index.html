@@ -6,21 +6,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="theme-color" content="#fff">
-  <link rel="stylesheet" media="all" href="lib/bootstrap/css/bootstrap.min.css" >
 	<link rel="stylesheet" media="all" href="css/style.css" >
-	
 </head>
 <body>
 <!-- BEGIN  out-->
 <div class="out">
-  <header class="header container">
+  <header class="header container hidden-sm hidden-xs">
       
     <div class="header__top">
       
       <div class="header__left">
         
         <ul class="nav-link">
-          <li class="nav-link__item"><a class="nav-link__link" href="#">О компании</a></li> 
+          <li class="nav-link__item"><a class="nav-link__link" href="about.html">О компании</a></li> 
           <li class="nav-link__item"><a class="nav-link__link" href="#"> Объекты</a></li> 
           <li class="nav-link__item"><a class="nav-link__link" href="#">Доставка и оплата</a></li> 
           <li class="nav-link__item"><a class="nav-link__link" href="#">Контакты</a></li> 
@@ -50,7 +48,7 @@
     <div class="header__bottom">
   
       <div class="header__left">
-        <a href="#" class="brand">
+        <a href="/" class="brand">
           <div class="brand__img"><img src="./img/logo.png" alt="ИНЖЕНЕРНЫЕ И СТРОИТЕЛЬНЫЕ СИСТЕМЫ"></div>
           <div class="brand__text">ИНЖЕНЕРНЫЕ <br> И СТРОИТЕЛЬНЫЕ СИСТЕМЫ</div>
         </a>  
@@ -59,28 +57,237 @@
       <div class="header__right calculate-cost">
         <div class="calculate-cost__text"><b>Удешевим смету</b> на инженерную <br>продукцию на 15-20%</div>
         <div class="calculate-cost__icon"><span class="icon-red-arrow"></span></div>
-        <button class="btn btn-calc">рассчитать заявку</button>
+        <button type="button" class="btn btn-calc" data-toggle="modal" data-target="#calcModal">рассчитать заявку</button>
       </div>
     </div>
   </header>
   
-  <nav class="navigation">
-    <div class="container">
-      <div class="row">
-        <div class="navigation__menu">
-          <ul class="menu">
-            <li class="menu__item"><a class="menu__link" href="#">каталог продукции</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Сферы применения</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">производители</a></li>
-          </ul>
-        </div>
   
+  <header class="header-mobile visible-xs visible-sm">
+    <div class="header-mobile__container container">
+      <div class="header-mobile__btn">
+        <button type="button" class="navbar-toggle js-open-menu">
+          <span class="icon-bar__group">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </span>
+          
+          <span class="navbar-toggle__text">
+            Меню
+          </span>
+        </button>
+      </div>
+      
+      <div class="header-mobile__action header__right">
+        <div class="action-icon-group">
+          <a class="action-icon-group__item" href="#" title="Корзина"><span class="icon-m-tel"></span></a>
+          <a class="action-icon-group__item" href="#" title="Поиск"><span class="icon-m-search-head"></span></a>
+        </div>
+      </div>
+  
+      <a href="#" class="header-mobile__logo">
+        <img src="img/m-logo.png" alt="Главная">
+      </a>
+    </div>
+  </header>
+  
+  <div class="visible-xs visible-sm">
+    <form action="#" id="headerSearch" class="head-search">
+      <div class="input-group"> 
+        <input class="form-control" placeholder="Поиск по сайту"> 
+        <span class="input-group-btn"> 
+          <button class="btn btn-default" type="button">
+            <span class="icon-m-search-btn"></span>
+          </button> 
+        </span> 
+      </div>
+    </form>
+  </div>
+  
+  <nav class="m-navigation">
+    <div class="m-navigation__controll">
+      <button class="close-m-menu js-close-m-menu"><span class="icon-close-menu"></span></button>
+    </div>
+  
+    <div class="m-navigation__menu">
+      <ul class="m-menu">
+            <li class="m-menu__item m-menu__item_has-sub-menu">
+              <a class="m-menu__link" href="category.html">Каталог продукции</a>
+              <span class="m-menu__open-submenu"><span class="icon-open-submenu"></span></span>
+              <div class="m-menu__sub">
+                <div class="m-sub-menu">
+  
+                  <div class="m-sub-menu__block">
+                    <h3 class="sub-menu__title">ТРУБЫ</h3>
+  
+                    <ul class="sub-menu__nav">
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ПНД (ПЭ)</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ НПВХ</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <span class="sub-menu__nav-link active">ТРУБЫ ГОРФРИРОВАННЫЕ</span>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ППР</a>
+                      </li>
+                    </ul>
+                  </div>
+  
+                  <div class="m-sub-menu__block">
+                    <h3 class="sub-menu__title">ОБОРУДОВАНИЕ</h3>
+  
+                    <ul class="sub-menu__nav">
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ПНД (ПЭ)</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ НПВХ</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ГОРФРИРОВАННЫЕ</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ППР</a>
+                      </li>
+                    </ul>
+                  </div>
+  
+                  <div class="m-sub-menu__block">
+                    <h3 class="sub-menu__title">ОЧИСТНЫЕ СООРУЖЕНИЯ</h3>
+  
+                    <ul class="sub-menu__nav">
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ПНД (ПЭ)</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ НПВХ</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ГОРФРИРОВАННЫЕ</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ППР</a>
+                      </li>
+                    </ul>
+                  </div>
+                
+                </div>
+              </div>
+            </li>
+            <li class="m-menu__item"><a class="m-menu__link" href="#">Сферы применения</a></li>
+            <li class="m-menu__item"><a class="m-menu__link" href="#">Производители</a></li>
+            <li class="m-menu__item"><a class="m-menu__link" href="#">О компании</a></li>
+            <li class="m-menu__item"><a class="m-menu__link" href="#">Объекты</a></li>
+            <li class="m-menu__item"><a class="m-menu__link" href="#">Доставка и оплата</a></li>
+            <li class="m-menu__item"><a class="m-menu__link" href="#">Контакты</a></li>
+          </ul>
+    </div>
+  </nav>
+  
+  <nav class="navigation hidden-xs hidden-sm">
+    <div class="container">
+      <div class="row navigation__row ">
         <div class="navigation__action">
-          <div class="action-icon-group">
+          <div class="action-icon-group hidden-xs hidden-sm">
             <a class="action-icon-group__item" href="#" title="Поиск"><span class="icon-white-search"></span></a>
             <a class="action-icon-group__item" href="#" title="Корзина"><span class="icon-white-cart"></span></a>
             <a class="action-icon-group__item" href="#" title="Контакты"><span class="icon-white-people"></span></a>
           </div>
+        </div>
+  
+        <div class="navigation__menu">
+          <ul class="menu">
+            <li class="menu__item menu__item_has-sub-menu">
+              <a class="menu__link" href="category.html">каталог продукции</a>
+              <span class="menu__open-submenu"></span>
+              <div class="menu__sub">
+                <div class="sub-menu">
+  
+                  <div class="sub-menu__block">
+                    <h3 class="sub-menu__title">ТРУБЫ</h3>
+  
+                    <ul class="sub-menu__nav">
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ПНД (ПЭ)</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ НПВХ</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <span class="sub-menu__nav-link active">ТРУБЫ ГОРФРИРОВАННЫЕ</span>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ППР</a>
+                      </li>
+                    </ul>
+                  </div>
+  
+                  <div class="sub-menu__block">
+                    <h3 class="sub-menu__title">ОБОРУДОВАНИЕ</h3>
+  
+                    <ul class="sub-menu__nav">
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ПНД (ПЭ)</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ НПВХ</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ГОРФРИРОВАННЫЕ</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ППР</a>
+                      </li>
+                    </ul>
+                  </div>
+  
+                  <div class="sub-menu__block">
+                    <h3 class="sub-menu__title">ОЧИСТНЫЕ СООРУЖЕНИЯ</h3>
+  
+                    <ul class="sub-menu__nav">
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ПНД (ПЭ)</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ НПВХ</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ГОРФРИРОВАННЫЕ</a>
+                      </li>
+  
+                      <li class="sub-menu__nav-item">
+                        <a href="#" class="sub-menu__nav-link">ТРУБЫ ППР</a>
+                      </li>
+                    </ul>
+                  </div>
+                
+                </div>
+              </div>
+            </li>
+            <li class="menu__item"><a class="menu__link" href="#">Сферы применения</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">производители</a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -143,12 +350,12 @@
           Отсрочка платежа
         </span>
   
-        <span class="info-group__item info-group__item_bold" >
+        <span class="info-group__item" >
           <span class="info-group__icon icon-white-clock"></span>
           Срочные отгрузки
         </span>
 
-        <span class="info-group__item info-group__item_bold" >
+        <span class="info-group__item" >
           <span class="info-group__icon icon-white-car"></span>
           Доставка по РФ и СНГ
         </span>
@@ -193,11 +400,41 @@
           <div class="manufacturer__item">
             <a href="#"><img src="img/fabrics/fabric-7.jpg" alt=""></a>
           </div>
+          
+          <div id="manufacturerCollapse" class="collapse">
+            
+            <div class="manufacturer__item">
+              <a href="#"><img src="img/diller/diller3.jpg" alt=""></a>
+            </div>
 
+            <div class="manufacturer__item">
+              <a href="#"><img src="img/fabrics/fabric-3.jpg" alt=""></a>
+            </div>
+
+            <div class="manufacturer__item">
+              <a href="#"><img src="img/fabrics/fabric-4.jpg" alt=""></a>
+            </div>
+
+            <div class="manufacturer__item">
+              <a href="#"><img src="img/fabrics/fabric-5.jpg" alt=""></a>
+            </div>
+
+            <div class="manufacturer__item">
+              <a href="#"><img src="img/fabrics/fabric-6.jpg" alt=""></a>
+            </div>
+
+            <div class="manufacturer__item">
+              <a href="#"><img src="img/fabrics/fabric-7.jpg" alt=""></a>
+            </div>
+          </div>
         </div>
 
         <div class="full-page-link">
-          <a href="#">Все производители</a>
+          <a data-toggle="collapse" href="#manufacturerCollapse" aria-expanded="false" aria-controls="manufacturerCollapse">
+            <span class="full-page-link__primary">Все производители</span>
+            <span class="full-page-link__active">Свернуть производителей</span>
+            <span class="icon-all-arrow"></span>
+          </a>
         </div>
       </section>
 
@@ -211,56 +448,80 @@
             
             <div class="tile-menu__item">
               <a href="#" class="tile-menu__link">
-                <div class="tile-menu__icon"></div>
+                <div class="tile-menu__icon">
+                  <img class="tile-menu__img" src="img/order/order1.png" height="46" width="37" alt="Водоснабжение">
+                  <img class="tile-menu__img-active" src="img/order/order1-active.png" height="46" width="37" alt="Водоснабжение">
+                </div>
                 <h4 class="tile-menu__title">Водоснабжение</h4>
               </a>
             </div>
 
             <div class="tile-menu__item">
               <a href="#" class="tile-menu__link">
-                <div class="tile-menu__icon"></div>
+                <div class="tile-menu__icon">
+                  <img class="tile-menu__img" src="img/order/order2.png" alt="Канализация">
+                  <img class="tile-menu__img-active" src="img/order/order2-active.png" alt="Канализация">
+                </div>
                 <h4 class="tile-menu__title">Канализация</h4>
               </a>
             </div>
 
             <div class="tile-menu__item">
               <a href="#" class="tile-menu__link">
-                <div class="tile-menu__icon"></div>
+                <div class="tile-menu__icon">
+                  <img class="tile-menu__img" src="img/order/order3.png" alt="Канализация">
+                  <img class="tile-menu__img-active" src="img/order/order3-active.png" alt="Канализация">
+                </div>
                 <h4 class="tile-menu__title">Газоснабжение</h4>
               </a>
             </div>
 
             <div class="tile-menu__item">
               <a href="#" class="tile-menu__link">
-                <div class="tile-menu__icon"></div>
+                <div class="tile-menu__icon">
+                  <img class="tile-menu__img" src="img/order/order4.png" alt="Канализация">
+                  <img class="tile-menu__img-active" src="img/order/order4-active.png" alt="Канализация">
+                </div>
                 <h4 class="tile-menu__title">Отопление</h4>
               </a>
             </div>
 
             <div class="tile-menu__item">
               <a href="#" class="tile-menu__link">
-                <div class="tile-menu__icon"></div>
+                <div class="tile-menu__icon">
+                  <img class="tile-menu__img" src="img/order/order5.png" alt="Канализация">
+                  <img class="tile-menu__img-active" src="img/order/order5-active.png" alt="Канализация">
+                </div>
                 <h4 class="tile-menu__title">Защита кабеля</h4>
               </a>
             </div>
 
             <div class="tile-menu__item">
               <a href="#" class="tile-menu__link">
-                <div class="tile-menu__icon"></div>
+                <div class="tile-menu__icon">
+                  <img class="tile-menu__img" src="img/order/order6.png" alt="Канализация">
+                  <img class="tile-menu__img-active" src="img/order/order6-active.png" alt="Канализация">
+                </div>
                 <h4 class="tile-menu__title">Тепловые сети</h4>
               </a>
             </div>
 
             <div class="tile-menu__item">
               <a href="#" class="tile-menu__link">
-                <div class="tile-menu__icon"></div>
+                <div class="tile-menu__icon">
+                  <img class="tile-menu__img" src="img/order/order7.png" alt="Канализация">
+                  <img class="tile-menu__img-active" src="img/order/order7-active.png" alt="Канализация">
+                </div>
                 <h4 class="tile-menu__title">Нефтепровод</h4>
               </a>
             </div>
 
             <div class="tile-menu__item">
               <a href="#" class="tile-menu__link">
-                <div class="tile-menu__icon"></div>
+                <div class="tile-menu__icon">
+                  <img class="tile-menu__img" src="img/order/order8.png" alt="Канализация">
+                  <img class="tile-menu__img-active" src="img/order/order8-active.png" alt="Канализация">
+                </div>
                 <h4 class="tile-menu__title">Очистные сооружения</h4>
               </a>
             </div>
@@ -269,131 +530,192 @@
         
         </div>
       </section>
+    </div>
 
-      <section class="popular-products-section">
+    
+    <section class="popular-products-section fill-grey hidden-xs">
+      <div class="container">
         <h2 class="title-primary">Популярная продукция</h2>
 
         <div class="popular-product">
-          <div class="popular-product__item product">
-            <div class="product__img">
-              <img src="img/popular/1.jpg" alt="">
+          <div class="js-popular-slider">
+            <div class="popular-product__item product">
+              <div class="product__img">
+                <a href="card.html"><img src="img/popular/1.jpg" alt=""></a>
+              </div>
+
+              <h4 class="product__name">
+                <a href=".html">Трубы полиэтиленовые (ПНД)</a>
+              </h4>
+            </div>
+         
+
+          
+            <div class="popular-product__item product">
+              <div class="product__img">
+                <a href="card.html"><img src="img/popular/2.jpg" alt=""></a>
+              </div>
+
+              <h4 class="product__name">
+                <a href="card.html">Трубы гофрированные</a>
+              </h4>
+            </div>
+          
+
+          
+            <div class="popular-product__item product">
+              <div class="product__img">
+                <a href="card.html"><img src="img/popular/3.jpg" alt=""></a>
+              </div>
+
+              <h4 class="product__name">
+                <a href="card.html">Трубы стальные</a>
+              </h4>
+            </div>
+          
+
+          
+            <div class="popular-product__item product">
+              <div class="product__img">
+                <a href="card.html"><img src="img/popular/4.jpg" alt=""></a>
+              </div>
+
+              <h4 class="product__name">
+                <a href="card.html">Краны стальные шаровые</a>
+              </h4>
+            </div>
+          
+
+
+            <div class="popular-product__item product">
+              <div class="product__img">
+                <a href="card.html"><img src="img/popular/5.jpg" alt=""></a>
+              </div>
+
+              <h4 class="product__name">
+                <a href="card.html">Задвижки</a>
+              </h4>
             </div>
 
-            <h4 class="product__name">Трубы полиэтиленовые (ПНД)</h4>
-          </div>
-       
+            <div class="popular-product__item product">
+              <div class="product__img">
+                <a href="card.html"><img src="img/popular/5.jpg" alt=""></a>
+              </div>
 
-        
-          <div class="popolar-product__item product">
-            <div class="product__img">
-              <img src="img/popular/2.jpg" alt="">
+              <h4 class="product__name">
+                <a href="card.html">Задвижки</a>
+              </h4>
             </div>
-
-            <h4 class="product__name">Трубы гофрированные</h4>
-          </div>
-        
-
-        
-          <div class="popular-product__item product">
-            <div class="product__img">
-              <img src="img/popular/3.jpg" alt="">
-            </div>
-
-            <h4 class="product__name">Трубы стальные</h4>
-          </div>
-        
-
-        
-          <div class="popular-product__item product">
-            <div class="product__img">
-              <img src="img/popular/4.jpg" alt="">
-            </div>
-
-            <h4 class="product__name">Краны стальные шаровые</h4>
-          </div>
-        
-
-
-          <div class="popular-product__item product">
-            <div class="product__img">
-              <img src="img/popular/5.jpg" alt="">
-            </div>
-
-            <h4 class="product__name">Задвижки</h4>
           </div>
         </div>
+      </div>
+    </section>
 
-      </section>
-
-
+    <div class="container">
       <section class="brand-product-section">
         <h2 class="title-primary">Аналоги брендовой продукции</h2>
 
-        <div class="brand-product">
-
-          <div class="brand-product-item">
-            <span class="brand-product-item__sale">-30%</span>
-            <div class="brand-product-item__images">
-              <a class="brand-product-item__refresh"></a>
-              <div class="brand-product-item__left">
-                <img src="img/brand/brand1-left.jpg" alt="">
-                <a class="brand-product-item__link btn btn-brand" href="#">КОРСИС</a>
+        <div class="brand-product row">
+          
+          <div class="col-md-6">
+            <div class="brand-product-item">
+              <span class="brand-product-item__sale">-30%</span>
+              <div class="brand-product-item__images">
+                <a class="brand-product-item__refresh">
+                  <span class="icon-circle-arrow"></span>
+                </a>
+                <div class="brand-product-item__left">
+                  <div class="brand-product-item__inner">
+                    <img src="img/brand/brand1-left.jpg" alt="">
+                  </div>
+                  <a class="brand-product-item__link btn btn-brand" href="#">КОРСИС</a>
+                </div>
+                <div class="brand-product-item__right">
+                  <div class="brand-product-item__inner">
+                    <img src="img/brand/brand1-rightt.jpg" alt="">
+                  </div>
+                  <a class="brand-product-item__link btn btn-brand" href="#">FDPLAST</a>
+                </div>
               </div>
-              <div class="brand-product-item__right">
-                <img src="img/brand/brand1-rightt.jpg" alt="">
-                <a class="brand-product-item__link btn btn-brand" href="#">FDPLAST</a>
-              </div>
+              <div class="brand-product-item__text">Трубы гофрированные полиэтиленовые (ПЭ)</div>
             </div>
           </div>
 
-          <div class="brand-product-item">
-            <span class="brand-product-item__sale">-15%</span>
-            <div class="brand-product-item__images">
-              <a class="brand-product-item__refresh"></a>
-              <div class="brand-product-item__left">
-                <img src="img/brand/brand1-left.jpg" alt="">
-                <a class="brand-product-item__link btn btn-brand" href="#">КОРСИС</a>
+          <div class="col-md-6">
+            <div class="brand-product-item">
+              <span class="brand-product-item__sale">-30%</span>
+              <div class="brand-product-item__images">
+                <a class="brand-product-item__refresh">
+                  <span class="icon-circle-arrow"></span>
+                </a>
+                <div class="brand-product-item__left">
+                  <div class="brand-product-item__inner">
+                    <img src="img/brand/brand2-left.jpg" alt="">
+                  </div>
+                  <a class="brand-product-item__link btn btn-brand" href="#">КОРСИС</a>
+                </div>
+                <div class="brand-product-item__right">
+                  <div class="brand-product-item__inner">
+                    <img src="img/brand/brand2-rightt.jpg" alt="">
+                  </div>
+                  <a class="brand-product-item__link btn btn-brand" href="#">FDPLAST</a>
+                </div>
               </div>
-              <div class="brand-product-item__right">
-                <img src="img/brand/brand1-rightt.jpg" alt="">
-                <a class="brand-product-item__link btn btn-brand" href="#">FDPLAST</a>
-              </div>
+              <div class="brand-product-item__text">Трубы гофрированные полипропиленовые (ПП)</div>
             </div>
           </div>
 
-          <div class="brand-product-item">
-            <span class="brand-product-item__sale">-20%</span>
-            <div class="brand-product-item__images">
-              <a class="brand-product-item__refresh"></a>
-              <div class="brand-product-item__left">
-                <img src="img/brand/brand1-left.jpg" alt="">
-                <a class="brand-product-item__link btn btn-brand" href="#">КОРСИС</a>
+          <div class="col-md-6">
+            <div class="brand-product-item">
+              <span class="brand-product-item__sale">-30%</span>
+              <div class="brand-product-item__images">
+                <a class="brand-product-item__refresh">
+                  <span class="icon-circle-arrow"></span>
+                </a>
+                <div class="brand-product-item__left">
+                  <div class="brand-product-item__inner">
+                    <img src="img/brand/brand3-left.jpg" alt="">
+                  </div>
+                  <a class="brand-product-item__link btn btn-brand" href="#">КОРСИС</a>
+                </div>
+                <div class="brand-product-item__right">
+                  <div class="brand-product-item__inner">
+                    <img src="img/brand/brand3-rightt.jpg" alt="">
+                  </div>
+                  <a class="brand-product-item__link btn btn-brand" href="#">FDPLAST</a>
+                </div>
               </div>
-              <div class="brand-product-item__right">
-                <img src="img/brand/brand1-rightt.jpg" alt="">
-                <a class="brand-product-item__link btn btn-brand" href="#">FDPLAST</a>
-              </div>
+              <div class="brand-product-item__text">Трубы полипропиленовые PPR</div>
             </div>
           </div>
 
-          <div class="brand-product-item">
-            <span class="brand-product-item__sale">-20%</span>
-            <div class="brand-product-item__images">
-              <a class="brand-product-item__refresh"></a>
-              <div class="brand-product-item__left">
-                <img src="img/brand/brand1-left.jpg" alt="">
-                <a class="brand-product-item__link btn btn-brand" href="#">КОРСИС</a>
+          <div class="col-md-6">
+            <div class="brand-product-item">
+              <span class="brand-product-item__sale">-30%</span>
+              <div class="brand-product-item__images">
+                <a class="brand-product-item__refresh">
+                  <span class="icon-circle-arrow"></span>
+                </a>
+                <div class="brand-product-item__left">
+                  <div class="brand-product-item__inner">
+                    <img src="img/brand/brand4-left.jpg" alt="">
+                  </div>
+                  <a class="brand-product-item__link btn btn-brand" href="#">КОРСИС</a>
+                </div>
+                <div class="brand-product-item__right">
+                  <div class="brand-product-item__inner">
+                    <img src="img/brand/brand4-rightt.jpg" alt="">
+                  </div>
+                  <a class="brand-product-item__link btn btn-brand" href="#">FDPLAST</a>
+                </div>
               </div>
-              <div class="brand-product-item__right">
-                <img src="img/brand/brand1-rightt.jpg" alt="">
-                <a class="brand-product-item__link btn btn-brand" href="#">FDPLAST</a>
-              </div>
+              <div class="brand-product-item__text">Краны стальные шаровые</div>
             </div>
           </div>
 
         </div>
         <div class="brand-product-action">
-          <a class="btn btn-all-brand" href="#"></a>
+          <a class="btn btn-all-brand" href="#">Полный ассортимент аналогов</a>
         </div>
       </section>
 
@@ -402,13 +724,25 @@
         <h2 class="title-primary">О нашей компании</h2>
 
         <div class="about">
-          <h3 class="about__title">Мы дорожим своей репутацией и не даем пустых обещаний</h3>
-          <div class="about__text">Более 10 000 наименований продукции от 230 производителей и брендов. Трубы, фитинги, трубопроводная и запорная арматура, системы колодцев, сэндвич-панели, а также сварочное оборудование для монтажа сетей из полимерных материалов и многое другое.</div>
-          <div class="about__author">Руководитель компании ИСС, Лукашин Н.Н.</div>
-
-          <div class="about__client">
-            <h4>Наши клиенты</h4>
-            <img src="" alt="">
+          <div class="about__photo hidden-xs"><img src="img/boss.jpg" height="384" width="242" alt="Лукашин Н.Н."></div>
+          <div class="about__content">
+            <h3 class="about__title">Мы дорожим своей репутацией и не даем пустых обещаний</h3>
+            <div class="about__text">Более 10 000 наименований продукции от 230 производителей и брендов. Трубы, фитинги, трубопроводная и запорная арматура, системы колодцев, сэндвич-панели, а также сварочное оборудование для монтажа сетей из полимерных материалов и многое другое.</div>
+            <div class="about__author">
+              <div class="about__photo visible-xs"><img src="img/boss.jpg" height="384" width="242" alt="Лукашин Н.Н."></div>
+              <span class="about__author-text">Руководитель компании ИСС, Лукашин Н.Н.</span>
+            </div>
+            <div class="about__client">
+              <h4>Наши клиенты</h4>
+              <div class="about__client-img">
+                <img src="img/about/1.jpg" height="49" width="114" alt="стройпроект">
+                <img src="img/about/2.jpg" height="38" width="106" alt="монаарт">
+                <img src="img/about/3.jpg" height="45" width="76"  alt="фелік">
+                <img src="img/about/4.jpg" height="47" width="63"  alt="темп">
+                <img src="img/about/5.jpg" height="45" width="137" alt="авангард">
+                <img src="img/about/6.jpg" height="39" width="85"  alt="гиргруп">
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -419,34 +753,131 @@
         
         <div class="dealer-list">
           
-          <div class="dealer-list-item">
-            <a href="#"><img src="" alt=""></a>
+          <div class="dealer-list__item">
+            <a href="#"><img src="img/diller/diller1.jpg" height="41" width="122" alt=""></a>
           </div>
 
-          <div class="dealer-list-item">
-            <a href="#"><img src="" alt=""></a>
+          <div class="dealer-list__item">
+            <a href="#"><img src="img/diller/diller2.jpg" height="32" width="84" alt=""></a>
           </div>
 
-          <div class="dealer-list-item">
-            <a href="#"><img src="" alt=""></a>
+          <div class="dealer-list__item">
+            <a href="#"><img src="img/diller/diller3.jpg" height="35" width="148" alt=""></a>
           </div>
 
-          <div class="dealer-list-item">
-            <a href="#"><img src="" alt=""></a>
+          <div class="dealer-list__item">
+            <a href="#"><img src="img/diller/diller4.jpg" height="45" width="162" alt=""></a>
+          </div>
+
+          <div id="dealerCollapse" class="collapse">
+             <div class="dealer-list__item">
+              <a href="#"><img src="img/diller/diller1.jpg" height="41" width="122" alt=""></a>
+            </div>
+
+            <div class="dealer-list__item">
+              <a href="#"><img src="img/diller/diller2.jpg" height="32" width="84" alt=""></a>
+            </div>
+
+            <div class="dealer-list__item">
+              <a href="#"><img src="img/diller/diller3.jpg" height="35" width="148" alt=""></a>
+            </div>
+
+            <div class="dealer-list__item">
+              <a href="#"><img src="img/diller/diller4.jpg" height="45" width="162" alt=""></a>
+            </div>
+
+            <div class="dealer-list__item">
+              <a href="#"><img src="img/diller/diller1.jpg" height="41" width="122" alt=""></a>
+            </div>
+
+            <div class="dealer-list__item">
+              <a href="#"><img src="img/diller/diller2.jpg" height="32" width="84" alt=""></a>
+            </div>
+
+            <div class="dealer-list__item">
+              <a href="#"><img src="img/diller/diller3.jpg" height="35" width="148" alt=""></a>
+            </div>
+
+            <div class="dealer-list__item">
+              <a href="#"><img src="img/diller/diller4.jpg" height="45" width="162" alt=""></a>
+            </div>
           </div>
 
         </div>
 
-        <div class="full-page-link">
-          <a href="#">Все производители</a>
+         <div class="full-page-link">
+          <a data-toggle="collapse" href="#dealerCollapse" aria-expanded="false" aria-controls="dealerCollapse">
+            <span class="full-page-link__primary">Все заводы</span>
+            <span class="full-page-link__active">Свернуть заводы</span>
+            <span class="icon-all-arrow"></span>
+          </a>
         </div>
       </section>  
+      
+      <div class="section-testimonial">
+        <h2 class="title-primary">Более 700 благодарных клиентов</h2>
+        <div class="testimonial-slider-wrap">
+          <div class="testimonial-slider js-testimonial-slider">
+            <div class="testimonial-slider__item">
+              <a class="testimonial-slider__link js-testimonial-gallery" href="img/thank/thank1.jpg">
+                <img src="img/thank/thank1.jpg" height="209" width="158" alt="">
+              </a>
 
-      <div class="costumer-slider-wrap">
-        <div class="costumer-slider">
-          <div class="costumer-slider__item"><a href="#">
-            <img src="" alt="">
-          </a></div>
+              <a class="testimonial-slider__link js-testimonial-gallery" href="img/thank/thank2.jpg">
+                <img src="img/thank/thank2.jpg" height="209" width="158" alt="">
+              </a>
+          
+              <a class="testimonial-slider__link js-testimonial-gallery" href="img/thank/thank1.jpg">
+                <img src="img/thank/thank1.jpg" height="209" width="158" alt="">
+              </a>
+          
+              <a class="testimonial-slider__link js-testimonial-gallery" href="img/thank/thank2.jpg">
+                <img src="img/thank/thank2.jpg" height="209" width="158" alt="">
+              </a>
+            </div>
+
+            <div class="testimonial-slider__item">
+              <a class="testimonial-slider__link js-testimonial-gallery" href="img/thank/thank1.jpg">
+                <img src="img/thank/thank1.jpg" height="209" width="158" alt="">
+              </a>
+
+              <a class="testimonial-slider__link js-testimonial-gallery" href="img/thank/thank2.jpg">
+                <img src="img/thank/thank2.jpg" height="209" width="158" alt="">
+              </a>
+          
+              <a class="testimonial-slider__link js-testimonial-gallery" href="img/thank/thank1.jpg">
+                <img src="img/thank/thank1.jpg" height="209" width="158" alt="">
+              </a>
+          
+              <a class="testimonial-slider__link js-testimonial-gallery" href="img/thank/thank2.jpg">
+                <img src="img/thank/thank2.jpg" height="209" width="158" alt="">
+              </a>
+            </div>
+
+            <div class="testimonial-slider__item">
+              <a class="testimonial-slider__link js-testimonial-gallery" href="img/thank/thank1.jpg">
+                <img src="img/thank/thank1.jpg" height="209" width="158" alt="">
+              </a>
+
+              <a class="testimonial-slider__link js-testimonial-gallery" href="img/thank/thank2.jpg">
+                <img src="img/thank/thank2.jpg" height="209" width="158" alt="">
+              </a>
+          
+              <a class="testimonial-slider__link js-testimonial-gallery" href="img/thank/thank1.jpg">
+                <img src="img/thank/thank1.jpg" height="209" width="158" alt="">
+              </a>
+          
+              <a class="testimonial-slider__link js-testimonial-gallery" href="img/thank/thank2.jpg">
+                <img src="img/thank/thank2.jpg" height="209" width="158" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="testimonial-slider-control">
+            <button class="slick-testimonial-btn slick-testimonial-prev"><span class="icon-t-slick-left"></span></button>
+            <div class="testimonial-slider-dots"></div>
+            <button class="slick-testimonial-btn slick-testimonial-next"><span class="icon-t-slick-rightt"></span></button>
+          </div>
         </div>
       </div>
     </div>
@@ -470,7 +901,7 @@
 
 
 
-          <div class="footer__menu col-md-8">
+          <div class="footer__menu col-md-9 col-sm-8 hidden-xs">
 
 
 
@@ -486,7 +917,7 @@
 
 
 
-                <li class="foot-menu__item"><a class="foot-menu__link" href="#">О компании</a></li>
+                <li class="foot-menu__item"><a class="foot-menu__link" href="about.html">О компании</a></li>
 
 
 
@@ -602,11 +1033,51 @@
 
 
 
-          <div class="footer__contact col-md-4">
+          <div class="footer__contact col-md-3 col-sm-4">
 
 
 
             <div class="info-group info-group__vertical">
+
+
+
+              <a class="info-group__item info-group__item_bold" href="tel:74995538140">
+
+
+
+                <span class="info-group__icon icon-tel-red"></span>
+
+
+
+                +7 499 553-81-40
+
+
+
+              </a>
+
+
+
+  
+
+
+
+              <a class="info-group__item" href="mailto:zakaz@iss-gk.ru">
+
+
+
+                <span class="info-group__icon icon-mail-red"></span>
+
+
+
+                zakaz@iss-gk.ru
+
+
+
+              </a>
+
+
+
+  
 
 
 
@@ -630,39 +1101,23 @@
 
 
 
-              <a class="info-group__item" href="mailto:zakaz@iss-gk.ru">
+              <span class="info-group__item">
 
 
 
-                <span class="info-group__icon icon-mail-red"></span>
+                <span class="info-group__icon icon-footer-map"></span>
 
 
 
-                zakaz@iss-gk.ru
+                Офис продаж: г. Мытищи, Олимпийский пр-т 13с1, корпус Б
 
 
 
-              </a>
+              </span>
 
 
 
-        
-
-
-
-              <a class="info-group__item info-group__item_bold" href="tel:74995538140">
-
-
-
-                <span class="info-group__icon icon-tel-red"></span>
-
-
-
-                +7 499 553-81-40
-
-
-
-              </a>
+              
 
 
 
@@ -671,6 +1126,18 @@
 
 
           </div>
+
+
+
+        </div>
+
+
+
+        <div class="footer__link hidden-xs">
+
+
+
+          <a href="#">Реквизиты компании</a>
 
 
 
@@ -694,14 +1161,6 @@
 
 
 
-      <div class="footer__company">2010-2016 ООО «ИСС»</div>
-
-
-
-  
-
-
-
       <div class="footer__copyright">
 
 
@@ -718,6 +1177,14 @@
 
 
 
+  
+
+
+
+      <div class="footer__company">2010-2016 ООО «ИСС»</div>
+
+
+
     </div>
 
 
@@ -725,6 +1192,45 @@
   </footer>
 </div>
 <!-- END out-->
+<div id="calcModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-sm" role="document">
+    <form class="modal-content" id="productSearch" name="productSearch">
+      <div class="modal-header text-center">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Не хотите тратить время на поиск продукции?</h4>
+        <p>Пришлите заявку и мы все <br> сделаем за Вас в течение 1 часа!</p>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <input type="tel" name="productSearch[phone]" id="productSearchPhone" class="form-control" placeholder="Ваш телефон*">
+        </div>
+
+        <div class="form-group">
+          <input type="mail" name="productSearch[email]" id="productSearchEmail" class="form-control" placeholder="Ваш e-mail*">
+        </div>
+
+        <div class="form-group">
+          <div class="a input-upload">
+            <input type="file" name="" id=""><span class="icon-link-1"></span> 
+            <span class="link-underline">Прикрепить заявку</span>
+          </div> <br>
+          <a data-toggle="collapse" href="#productSearchTextarea" aria-expanded="false" aria-controls="productSearchTextarea">
+            <span class="icon-link-2"></span> <span class="link-underline">Добавить комментарий</span>
+          </a>
+        </div>
+
+        <div id="productSearchTextarea" class="form-group collapse">
+          <textarea name="productSearch[comment]" id="productSearchComment" rows="5" class="form-control" placeholder="Ваш комментарий"></textarea>
+        </div>
+
+        <div class="modal-action">
+          <button type="submit" class="btn btn-calc btn-block">рассчитать заявку</button>
+        </div>
+      </div>
+    </form><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 <script src="js/app.js"></script>
 </body>
 </html>
