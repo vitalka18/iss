@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <title>Template</title>
@@ -456,8 +456,8 @@
 
           <div class="card__panel clearfix">
             <div class="card__count">
-              <label for="card[count]">Кол-во, м</label>
-              <input type="text" name="card[count]" class="form-control form-control_inline" value="280">
+              <label for="cardCount">Кол-во, м</label>
+              <input type="text" name="card[count]" id="cardCount" class="form-control form-control_inline" value="280">
             </div>
             <div class="card__price"><span>Цена:</span> 5 451 р.</div>
             <div class="card__add-to-card">
@@ -488,7 +488,7 @@
 
           <!-- Tab panes -->
           <div class="tab-content">
-            <article role="tabpanel" class="tab-pane active" id="characteristic">
+            <div role="tabpanel" class="tab-pane active" id="characteristic">
               <div class="table-responsive">
                 <table class="table table-striped">
                   <tr>
@@ -546,15 +546,15 @@
                   </tr>
                 </table>
               </div>
-            </article>
+            </div>
 
-            <article role="tabpanel" class="tab-pane" id="production">
+            <div role="tabpanel" class="tab-pane" id="production">
               производство
-            </article>
+            </div>
 
-            <article role="tabpanel" class="tab-pane" id="documentation">
+            <div role="tabpanel" class="tab-pane" id="documentation">
               документация
-            </article>
+            </div>
           </div>
         </div>
 
@@ -1047,12 +1047,12 @@
         </div>
 
         <div class="form-group">
-          <input type="mail" name="productSearch[email]" id="productSearchEmail" class="form-control" placeholder="Ваш e-mail*">
+          <input type="email" name="productSearch[email]" id="productSearchEmail" class="form-control" placeholder="Ваш e-mail*">
         </div>
 
         <div class="form-group">
           <div class="a input-upload">
-            <input type="file" name="" id=""><span class="icon-link-1"></span> 
+            <input type="file" name="productSearch[file]" id="productSearchFile"><span class="icon-link-1"></span> 
             <span class="link-underline">Прикрепить заявку</span>
           </div> <br>
           <a data-toggle="collapse" href="#productSearchTextarea" aria-expanded="false" aria-controls="productSearchTextarea">
