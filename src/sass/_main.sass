@@ -27,6 +27,36 @@
   .action-icon-group
     margin: 0 -7px 0 0
 
+.action-icon-group__item_cart
+  position: relative
+  &:hover 
+    span
+      +s(blue-cart)
+    .dropdown-cart
+      display: block
+
+.dropdown-cart
+  position: absolute
+  display: none
+  top: 35px
+  right: -10px
+  width: 205px
+  padding: 12px 16px
+  font-size: 13px
+  background: #3498db
+  color: #fff
+  &:before 
+    content: ''
+    position: absolute
+    top: -7px
+    right: 20px
+    display: inline-block
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 0 7px 7px 7px
+    border-color: transparent transparent #3498db transparent
+
 .navbar-toggle
   float: left
   overflow: hidden
@@ -359,8 +389,6 @@
   padding: 10px
   vertical-align: middle
   transition: opacity .3s
-  &:hover
-    opacity: .7
 
 .m-navigation
   display: none
