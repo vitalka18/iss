@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Template</title>
+  //=include partials/head.html
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+  //=include partials/header.html
+  
+  <aside class="container container_breadcrumbs hidden-xs hidden-sm">
+    <ol class="breadcrumb">
+      <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">ГЛАВНАЯ</a></li>
+      <li class="breadcrumb__item active">Выставление счета</li>
+    </ol>
+  </aside>
+
+  <main class="main main_inner-page"> 
+    <div class="container card">
+      <h1>Выставление счета</h1>
+      
+      <form class="form form_registration-app row">
+        <div class="col-md-3 col-md-push-9">
+          <div class="regist-app">
+            <h3>Ваш заказ</h3>
+
+            <div class="regist-app__item">
+              <h4 class="regist-app__name">Труба ПНД техническая 160 мм SDR 11.5</h4>
+              
+              <dl class="regist-app__dl">
+                <dt>Кол-во:</dt> <dd>1 250</dd>
+              </dl>
+
+              <dl class="regist-app__dl">
+                <dt>Стоимость:</dt> <dd>14 560 руб.</dd>
+              </dl>
+            </div>
+
+            <div class="regist-app__item">
+              <h4 class="regist-app__name">Труба ПНД техническая 160 мм SDR 11.5</h4>
+              
+              <dl class="regist-app__dl">
+                <dt>Кол-во:</dt> <dd>1 250</dd>
+              </dl>
+
+              <dl class="regist-app__dl">
+                <dt>Стоимость:</dt> <dd>14 560 руб.</dd>
+              </dl>
+            </div>
+
+            <div class="regist-app__item">
+              <h4 class="regist-app__name">Труба ПНД техническая 160 мм SDR 11.5</h4>
+              
+              <dl class="regist-app__dl">
+                <dt>Кол-во:</dt> <dd>1 250</dd>
+              </dl>
+
+              <dl class="regist-app__dl">
+                <dt>Стоимость:</dt> <dd>14 560 руб.</dd>
+              </dl>
+            </div>
+
+            <div class="regist-app__result">
+              Итого: <span>28 480 руб.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-9 col-md-pull-3">
+          <h3>Покупатель*</h3>
+
+          <div class="row">
+            <div class="col-md-4 form-group">
+              <input type="text" class="form-control" placeholder="Ваше имя*">
+            </div>
+
+            <div class="col-md-4 form-group">
+              <input type="tel" class="form-control" placeholder="Ваше телефон*">
+            </div>
+
+            <div class="col-md-4 form-group">
+              <input type="email" class="form-control" placeholder="Ваша почта*">
+            </div>
+          </div>
+
+          <h3>Реквизиты компании*</h3>
+          <div class="row">
+            <div class="col-md-4 col-sm-6 form-group">
+              <input type="text" class="form-control" placeholder="Введите ИНН компании*">
+            </div>
+
+            <div class="col-md-8 col-sm-6 form-group">
+              <span>или</span>
+              <div class="a input-upload">
+                <input type="file" name="productSearch[file]" id="productSearchFile"><span class="icon-link-1"></span> 
+                <span class="link-underline">Прикрепите карточку организации</span>
+              </div>
+            </div>
+          </div>
+
+          <h3>Доставка</h3>
+          <div class="row">
+            <div class="col-md-4 form-group">
+              <select name="" id="" class="form-control">
+                <option value="">Выберите город</option>
+                <option value="">Выберите город</option>
+                <option value="">Выберите город</option>
+                <option value="">Выберите город</option>
+                <option value="">Выберите город</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-regist-result">
+            <div class="row">
+              <div class="col-md-8 form-regist-result__text"><span class="icon-atant"></span> Выставляя счет мы фиксируем цену закупки на 5 дней!</div>
+              <div class="col-md-4">
+                <button type="submit" class="btn btn-calc btn-block">Отправить счет на email</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      
+    </div>
+    
+  </main>
+
+  //=include partials/footer.html
+</div>
+<!-- END out-->
+//=include partials/foot.html
+</body>
+</html>

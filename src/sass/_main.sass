@@ -1255,6 +1255,64 @@
   border-radius: 0
   box-shadow: none !important
 
+.form
+  h3
+    margin-bottom: 25px
+    text-transform: uppercase
+
+.form_registration-app
+  .form-group
+    margin-bottom: 40px
+
+    >span,
+    .a.input-upload 
+      display: inline-block
+      margin: 10px 0 0
+      vertical-align: middle
+
+    .a.input-upload 
+      margin-left: 10px
+
+  .form-regist-result 
+    [class*="icon"]
+      vertical-align: middle
+      margin-right: 5px
+
+  .form-regist-result__text
+    padding: 9px 15px
+
+.regist-app
+  padding: 20px
+  border-radius: 2px
+  background: #f9f9f9
+
+.regist-app__item
+  padding-bottom: 15px
+  margin-bottom: 15px
+  border-bottom: 1px solid #e4e4e4
+
+.regist-app__name
+  margin-bottom: 10px
+  font-size: 14px
+  font-weight: 700
+
+.regist-app__dl
+  +clr
+  font-size: 12px
+  dt
+    float: left
+    width: 85px
+    font-weight: 400
+  dd
+    margin-left: 95px
+
+.regist-app__result
+  margin-top: 25px
+  font-weight: 700
+  font-size: 16px
+  span
+    color: #ff4e4e
+
 .form-inline
   margin: 15px 0 35px
   padding: 30px 20px
@@ -1272,6 +1330,7 @@
     font-size: 13px
     color: #3498db
     text-decoration: none
+    cursor: pointer!important
     &:hover
       text-decoration: none
       color: #3498bd
@@ -1282,15 +1341,16 @@
 .input-upload
   position: relative
   overflow: hidden
+  cursor: pointer!important
   input[type="file"]
-    cursor: pointer
+    cursor: pointer!important
+    opacity: 0
     z-index: 555
     position: absolute
     top: 0
     left: 0
     width: 100%
     height: 100%
-    opacity: 0
 .a
   padding-bottom: 2px
 a, .a
@@ -1560,55 +1620,7 @@ a, .a
   .icon
     margin-bottom: 6px
 
-.additional-good__item
-  position: relative
-  padding: 0 15px
-  &:first-child
-    padding-left: 0
-  &:after
-    content: ''
-    position: absolute
-    top: 15px
-    bottom: 15px
-    right: 0
-    display: block
-    width: 1px
-    height: 60px
-    background: #e4e4e4
-  &:last-child:after
-    display: none
 
-.additional-good__link
-  display: block
-  padding: 15px 17px
-  background: #fff
-  transition: background .3s
-  +clr
-  img
-    vertical-align: top
-  &:hover
-    text-decoration: none
-    background: #f9f9f9
-    box-shadow: 0 0 0 1px #e4e4e4
-
-.additional-good__preview
-  display: block
-  width: 90px
-  float: left
-
-.additional-good__content
-  display: block
-  margin-left: 100px
-
-.additional-good__title
-  display: block
-  color: #000
-  font-size: 13px
-
-.additional-good__price
-  display: block
-  color: #858585
-  font-size: 12px
 
 .card__main-info
   > *
@@ -1773,6 +1785,198 @@ a, .a
   cursor: pointer
   transition: background .3s
 
+.additional-good__item
+  position: relative
+  padding: 0 15px
+  &:first-child
+    padding-left: 0
+  &:after
+    content: ''
+    position: absolute
+    top: 15px
+    bottom: 15px
+    right: 0
+    display: block
+    width: 1px
+    background: #e4e4e4
+  &:last-child:after
+    display: none
+
+.additional-good__link
+  display: block
+  padding: 15px 17px
+  background: #fff
+  transition: background .3s
+  +clr
+  img
+    vertical-align: top
+  &:hover,
+    text-decoration: none
+    background: #f9f9f9
+    box-shadow: 0 0 0 1px #e4e4e4
+  a:hover
+    text-decoration: none
+
+.additional-good__preview
+  display: block
+  width: 90px
+  float: left
+
+.additional-good__content
+  display: block
+  margin-left: 100px
+
+.additional-good__title
+  display: block
+  color: #000
+  font-size: 13px
+
+.additional-good__price
+  display: block
+  color: #858585
+  font-size: 12px
+
+.additional-good__add
+  +clr
+  margin: 15px 0 0
+
+
+.additional-good__add-field
+  float: left
+  width: 90px
+
+.additional-good__add-btn
+  margin-left: 100px
+  float: none
+  padding: 13px 0
+
+.table-order
+  margin-bottom: 30px
+  th
+    padding: 13px 20px
+    background: #f9f9f9
+    font-size: 12px
+    text-align: center
+    &:nth-child(4)
+      text-align: left
+  td
+    padding: 20px
+    text-align: center
+    vertical-align: middle
+    font-size: 13px
+    border-bottom: 1px solid #e4e4e4
+
+    &:nth-child(1),
+    &:nth-child(4),
+    &:nth-child(5)
+      text-align: left
+
+    &:nth-child(2)
+      color: #5d5b5b
+
+    &:nth-child(3)
+      a
+        color: #000
+        border-bottom: 1px dotted #000
+        &:hover 
+          text-decoration: none
+          color: #000
+          border-style: solid
+
+    h3
+      margin-bottom: 5px
+      font-size: 15px
+      + span 
+        color: #858585
+        font-size: 12px
+
+.order__city
+  margin-bottom: 60px
+.order__radio-group
+  display: inline-block
+  text-transform: uppercase
+  .radio-btn__label
+    padding: 13px 20px
+
+.form-inline-order
+  display: inline-block
+  margin-left: 25px
+  .form-control
+    display: inline-block
+    width: 200px
+  label
+    margin-right: 10px
+
+.order__present
+  margin-bottom: 60px
+  padding: 20px
+  border-radius: 2px
+  background: #f9f9f9
+
+.l-order-present
+  display: flex
+  flex-flow: row nowrap
+  justify-content: space-between
+  align-items: center
+
+.order-present-text
+  width: 220px
+  padding-left: 20px
+  h3
+    text-transform: none
+    margin-bottom: 5px
+
+.order-present-form
+  width: 500px
+  text-align: right
+  .form-control
+    display: inline-block
+    margin: 0 10px
+    width: 190px
+    height: 40px
+    padding: 9px 12px
+  .btn
+    padding: 10px 25px
+  label
+    text-align: left
+    vertical-align: middle
+
+.order-result
+  +clr
+  padding-bottom: 60px
+  margin-bottom: 35px
+  border-bottom: 1px solid #e4e4e4
+
+.order-result__left
+  float: left
+  padding: 9px 0
+  a
+    font-size: 13px
+    color: #000
+    span
+      margin-right: 10px
+      vertical-align: middle
+
+.order-result__price
+  margin-right: 15px
+  font-size: 13px
+  .price
+    font-size: 18px
+    font-weight: 700
+    color: #ff4e4e
+
+
+.order-result__right
+  float: right
+
+.delete 
+  min-width: 60px
+  font-size: 12px
+  color: #000
+  &:hover
+    color: #000
+    text-decoration: none
+
 @media screen and (max-width: 991px)
   .navs_category-container
     margin: 0
@@ -1872,6 +2076,20 @@ a, .a
     margin-bottom: 5px
     font-size: 15px
     font-weight: 700
+  
+  .regist-app,
+  .form_registration-app .form-group
+    margin-bottom: 15px
+  
+  .order-present-form
+    width: 300px
+    .form-control
+      margin: 0
+    .btn
+      margin-top: 10px
+  .order-present-form label
+    text-align: right
+    margin-bottom: 5px  
 
 @media screen and (max-width: 767px)
   .video-gallery
@@ -2187,6 +2405,67 @@ a, .a
     border-bottom: 1px solid #e4e4e4
     &:hover
       box-shadow: none
+
+  .additional-good__add-btn
+    margin-left: 100px
+    float: none
+    padding: 13px 0
+    width: auto
+
+  .additional-good__item
+    width: 50%
+    float: left
+
+  .order-result
+
+  .order-result__left
+    float: none
+    width: 100%
+    text-align: center
+
+  .order-result__right
+    float: none
+    text-align: center
+
+  .order-result__price
+    display: block
+    margin: 0 0 15px
+
+  .order__city
+    .order__radio-group
+      display: block
+      text-align: center
+
+    .form-inline-order
+      display: block
+      margin: 15px auto 0
+      text-align: center
+  
+  .l-order-present
+    display: block
+
+  .order-present-text
+    margin: 0
+    width: auto
+    padding-left: 0
+
+  .order-present-form
+    width: auto
+    text-align: left
+    .btn
+      margin: 0
+    label
+      display: block
+      text-align: left
+    .form-control
+      vertical-align: middle
+  
+  .order.form
+    .table-order
+      margin-bottom: 0
+    .table-responsive
+      margin-bottom: 40px
+
 @media screen and (max-width: 600px)  
   .calculate-cost
     position: relative
@@ -2213,3 +2492,17 @@ a, .a
   
   .testimonial-slider-dots
     max-width: 222px
+
+  .additional-good__item
+    width: 100%
+    float: none
+
+@media screen and (max-width: 480px) 
+  .order-present-form
+    .form-control
+      display: block
+      width: 100%
+    .btn
+      display: block
+      width: 100%
+      margin-top: 10px
