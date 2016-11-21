@@ -45,10 +45,11 @@
   font-size: 13px
   background: #3498db
   color: #fff
+  z-index: 50
   &:before 
     content: ''
     position: absolute
-    top: -7px
+    top: -6px
     right: 20px
     display: inline-block
     width: 0
@@ -56,6 +57,36 @@
     border-style: solid
     border-width: 0 7px 7px 7px
     border-color: transparent transparent #3498db transparent
+
+.action-icon-group__item_search
+  position: relative
+  &:hover,
+  &:focus
+    .form-control
+      width: 200px
+      padding: 10px
+      opacity: 1
+  .form-control
+    position: absolute
+    top: 0
+    right: 100%
+    width: 0
+    height: 40px
+    padding: 10px 0
+    opacity: 0
+    transition: width .3s, opacity .3s
+    &:focus
+      opacity: 1
+      width: 200px
+      padding: 10px
+  button
+    background-color: transparent
+    &:active,
+    &:focus
+      &+.form-control
+        width: 200px
+        padding: 10px
+        opacity: 1
 
 .navbar-toggle
   float: left
@@ -188,7 +219,8 @@
     opacity: .7
 
 .info-group__item_bold
-  font-family: "ClearSansBold"
+  font-weight: bold
+  font-family: "ClearSansBold", sans-serif
 
 .info-group__icon
   display: inline-block
@@ -211,18 +243,19 @@
 
 .brand__text
   padding-left: 12px
-  font-family: "ClearSansBold"
+  font-weight: bold
+  font-family: "ClearSansBold", sans-serif
   text-transform: uppercase
 
 .calculate-cost
   display: flex
-  width: 451px
+  width: 460px
   flex-flow: row nowrap
   align-items: center
   margin-top: 8px
 
 .calculate-cost__icon
-  margin: 0 25px 0 18px
+  margin: 0 18px
 //==============================================================================
 // navigation
 //==============================================================================
@@ -261,7 +294,8 @@
   padding: 15px 20px 15px 0
   color: #fff
   font-size: 13px
-  font-family: "ClearSansBold"
+  font-weight: bold
+  font-family: "ClearSansBold", sans-serif
   text-decoration: none
   text-transform: uppercase
   transition: color 0.3s, text-shadow 0.3s
@@ -478,7 +512,8 @@
   padding: 12px 27px
   background: #ff4e4e
   text-transform: uppercase
-  font-family: "ClearSansBold"
+  font-family: "ClearSansBold", sans-serif
+  font-weight: bold
   font-size: 12px
   color: #fff
   transition: background .3s
@@ -493,7 +528,8 @@
   border-radius: 2px
   background: #3498db
   text-transform: uppercase
-  font-family: "ClearSansBold"
+  font-weight: bold
+  font-family: "ClearSansBold", sans-serif
   font-size: 12px
   color: #fff
   transition: background .3s
@@ -527,7 +563,8 @@
   border-radius: 2px
   background: #3498db
   text-transform: uppercase
-  font-family: "ClearSansBold"
+  font-weight: bold
+  font-family: "ClearSansBold", sans-serif
   font-size: 13px
   color: #fff
   transition: background .3s
@@ -605,7 +642,8 @@
 
 .main-slider__title
   margin-bottom: 15px
-  font-family: "ClearSansBold"
+  font-weight: bold
+  font-family: "ClearSansBold", sans-serif
   font-size: 36px
   line-height: 1.4
   text-transform: uppercase
