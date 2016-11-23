@@ -27,6 +27,16 @@ $(document).ready(function() {
     }
   });
   
+  $(document).on('change', '.input-upload input', function(ev) {
+    var $that = $(this);
+    var $out = $that.closest('.input-upload');
+    var $text = $out.find('.link-underline');
+    if ( $that.val().length > 0 ) {
+      $text.text( $that.val().replace(/.*[\/\\]/, '') );
+    } else {
+      $text.text( $text.data('text') );  
+    }
+  });
 
   $('.js-video').magnificPopup({
     type: 'iframe',

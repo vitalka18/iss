@@ -416,7 +416,7 @@
     transition: opacity .3s, left .3s
 
 .action-icon-group 
-  margin: 5px
+  margin: 5px 5px 0
 
 .action-icon-group__item
   display: inline-block
@@ -1305,16 +1305,23 @@
     vertical-align: middle
     text-align: center
     border: 1px solid #ececec
+    &:hover img
+      opacity: .7
     img
       vertical-align: middle
       max-width: 100%
       height: auto
+      transition: opacity .3s
+  + .collapse
+    .our-client
+      margin-top: -1px
 
 .show-more-client 
   margin: 40px 0 70px
   font-size: 12px
   a
-    &:hover
+    &:hover,
+    &:focus
       text-decoration: none
 
 .modal-content
