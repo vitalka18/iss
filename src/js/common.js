@@ -16,6 +16,9 @@ $(document).ready(function() {
   }
 
   $(window).resize(function() {
+    $('.aside-link-group').css({
+      'height': $('.aside-link-group__inner').outerHeight()
+    });
     if ( $(window).width() > 991 ) {
       if (!$('.js-category-menu').hasClass('slick-initialized')) {
         categoryMenu();
@@ -71,6 +74,25 @@ $(document).ready(function() {
   $(document).on('click', '.js-close-m-menu', function() {
     $('.m-navigation').fadeOut(300);
   });
+
+  $("input[type=tel]").inputmask("+7(999)999-99-99");
+
+  $('.aside-link-group').css({
+    'height': $('.aside-link-group__inner').outerHeight()
+  });
+
+  $(window).scroll(function() {
+    var wh = $(window).outerHeight();
+    var $el = $('.aside-link-group');
+    var $elHeight = $el.height();
+    var offsetTop = $el.offset().top + $elHeight;
+    var scrollTop = $(document).scrollTop();
+    if (wh > offsetTop - scrollTop && $(window).width() > 991) {
+      $('.aside-link-group__inner').addClass('fixed');
+    } else {
+      $('.aside-link-group__inner').removeClass('fixed');
+    }
+  });
 });
 
 
@@ -119,8 +141,9 @@ function categoryMenu() {
     speed: 500,
     prevArrow: '',
     nextArrow: $slider.parent().find('.slick-testimonial-next'),
-    slidesToShow: 4,
+    slidesToShow: 1,
     slideToScroll: 1,
+    variableWidth: true,
     responsive: [
       {
         breakpoint: 991,
