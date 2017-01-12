@@ -79,7 +79,7 @@ $(document).ready(function() {
       }
     }
   });
-  
+
   $(document).on('change', '.input-upload input', function(ev) {
     var $that = $(this);
     var $out = $that.closest('.input-upload');
@@ -87,7 +87,7 @@ $(document).ready(function() {
     if ( $that.val().length > 0 ) {
       $text.text( $that.val().replace(/.*[\/\\]/, '') );
     } else {
-      $text.text( $text.data('text') );  
+      $text.text( $text.data('text') );
     }
   });
 
@@ -144,7 +144,15 @@ $(document).ready(function() {
         $('.aside-link-group__inner').removeClass('fixed');
       }
     }
-    
+
+  });
+
+  $('.control-toggle').on('click', '.js-order-count', function() {
+    $(this).hide(0).next('input').show(0).focus();
+  });
+
+  $('.control-toggle').on('focusout', 'input', function() {
+    $(this).hide(0).prev('.js-order-count').show(0);
   });
 });
 
@@ -201,7 +209,7 @@ function categoryMenu() {
       {
         breakpoint: 991,
         settings: {
-          unslick: true       
+          unslick: true
         }
       },
     ]
@@ -228,25 +236,25 @@ function popularSlider() {
       {
         breakpoint: 991,
         settings: {
-          slidesToShow: 4        
+          slidesToShow: 4
         }
       },
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 3        
+          slidesToShow: 3
         }
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2        
+          slidesToShow: 2
         }
       },
       {
         breakpoint: 450,
         settings: {
-          slidesToShow: 1    
+          slidesToShow: 1
         }
       },
     ]
@@ -279,13 +287,13 @@ function testimonialSlider() {
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 1        
+          slidesToShow: 1
         }
       },
       {
         breakpoint: 500,
         settings: {
-          slidesToShow: 1        
+          slidesToShow: 1
         }
       },
     ]

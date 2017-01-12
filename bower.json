@@ -1,0 +1,22 @@
+{
+  "name": "iss",
+  "description": "font magazine",
+  "main": "",
+  "authors": [
+    "Kriskov Vitaliy <kriskov.vitaliy@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/vitalka18/iss",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "magnific-popup": "Magnific-Popup#^1.1.0"
+  }
+}
